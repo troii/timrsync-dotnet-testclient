@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:tns="http://timr.com/timrsync" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://timr.com/timrsync" targetNamespace="http://timr.com/timrsync" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://timr.com/timrsync" xmlns:tns="http://timr.com/timrsync" targetNamespace="http://timr.com/timrsync" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <schema elementFormDefault="qualified" targetNamespace="http://timr.com/timrsync" xmlns="http://www.w3.org/2001/XMLSchema">
       <complexType name="Task">
@@ -18,7 +18,7 @@
           <element minOccurs="0" maxOccurs="1" name="end" type="date">
             <annotation>
               <documentation>
-						task is available unitl this day
+						task is available until this day
 					</documentation>
             </annotation>
           </element>
@@ -31,16 +31,35 @@
             </annotation>
           </element>
           <element minOccurs="1" maxOccurs="1" name="billable" type="boolean" />
-          <element minOccurs="0" maxOccurs="unbounded" name="subtasks" type="sch:Task" />
+          <element minOccurs="0" maxOccurs="unbounded" name="subtasks" type="tns:Task" />
           <element minOccurs="0" maxOccurs="1" name="customField1" type="string" />
           <element minOccurs="0" maxOccurs="1" name="customField2" type="string" />
           <element minOccurs="0" maxOccurs="1" name="customField3" type="string" />
         </sequence>
       </complexType>
-      <element name="AddTaskRequest" type="sch:Task" />
+      <element name="AddTaskRequest" type="tns:Task" />
       <element name="AddTaskResponse" type="long" />
-      <element name="UpdateTaskRequest" type="sch:Task" />
+      <element name="UpdateTaskRequest" type="tns:Task" />
       <element name="UpdateTaskResponse" type="boolean" />
+      <element name="UpdateTaskIdRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="task" type="tns:Task" />
+            <element minOccurs="1" maxOccurs="1" name="newExternalTaskId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateTaskIdResponse" type="boolean" />
+      <element name="SetTaskExternalIdRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="name" type="string" />
+            <element minOccurs="0" maxOccurs="1" name="parentExternalId" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="newExternalTaskId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SetTaskExternalIdResponse" type="boolean" />
       <element name="DeleteTaskRequest" type="string" />
       <element name="DeleteTaskResponse" type="boolean" />
       <complexType name="User">
@@ -51,10 +70,11 @@
           <element minOccurs="0" maxOccurs="1" name="lastname" type="string" />
           <element minOccurs="1" maxOccurs="1" name="email" type="string" />
           <element minOccurs="1" maxOccurs="1" name="isAdmin" type="boolean" />
-          <element minOccurs="0" maxOccurs="1" name="leaved" type="date">
+          <element minOccurs="0" maxOccurs="1" name="resignDate" type="date">
             <annotation>
-              <documentation>date when user leaved company, after this date this user is not allowed to log
-						in anymore</documentation>
+              <documentation>date when user resigned, after this date this user is not allowed to log
+						in anymore
+					</documentation>
             </annotation>
           </element>
           <element minOccurs="0" maxOccurs="1" name="workingHours" type="decimal">
@@ -65,10 +85,19 @@
           <element minOccurs="0" maxOccurs="1" default="false" name="isTeamLeader" type="boolean" />
         </sequence>
       </complexType>
-      <element name="AddUserRequest" type="sch:User" />
+      <element name="AddUserRequest" type="tns:User" />
       <element name="AddUserResponse" type="long" />
-      <element name="UpdateUserRequest" type="sch:User" />
+      <element name="UpdateUserRequest" type="tns:User" />
       <element name="UpdateUserResponse" type="boolean" />
+      <element name="UpdateUserIdRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="user" type="tns:User" />
+            <element minOccurs="1" maxOccurs="1" name="newExternalUserId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateUserIdResponse" type="boolean" />
       <element name="DeleteUserRequest" type="string" />
       <element name="DeleteUserResponse" type="boolean" />
       <element name="AssignTaskToUserRequest">
@@ -91,28 +120,31 @@
       <element name="RemoveTaskFromUserResponse" type="boolean" />
       <complexType name="WorkTime">
         <complexContent mixed="false">
-          <extension base="sch:Record">
+          <extension base="tns:Record">
             <sequence>
               <element minOccurs="1" maxOccurs="1" name="externalWorkItemId" type="string" />
               <element minOccurs="0" maxOccurs="1" name="description" type="string" />
+              <element minOccurs="0" maxOccurs="1" default="CHANGEABLE" name="status" type="tns:WorkTimeStatus" />
             </sequence>
           </extension>
         </complexContent>
       </complexType>
       <complexType name="ProjectTime">
         <complexContent mixed="false">
-          <extension base="sch:Record">
+          <extension base="tns:Record">
             <sequence>
               <element minOccurs="1" maxOccurs="1" name="externalTaskId" type="string" />
+              <element minOccurs="1" maxOccurs="1" name="taskBreadCrumbs" type="string" />
               <element minOccurs="0" maxOccurs="1" name="description" type="string" />
               <element minOccurs="1" maxOccurs="1" name="billable" type="boolean" />
+              <element minOccurs="0" maxOccurs="1" default="CHANGEABLE" name="status" type="tns:ProjectTimeStatus" />
             </sequence>
           </extension>
         </complexContent>
       </complexType>
       <complexType name="DriveLog">
         <complexContent mixed="false">
-          <extension base="sch:Record">
+          <extension base="tns:Record">
             <sequence>
               <element minOccurs="1" maxOccurs="1" name="externalCarId" type="string" />
               <element minOccurs="1" maxOccurs="1" name="startMileage" type="long" />
@@ -120,6 +152,8 @@
               <element minOccurs="0" maxOccurs="1" name="route" type="string" />
               <element minOccurs="0" maxOccurs="1" name="purpose" type="string" />
               <element minOccurs="0" maxOccurs="1" name="visited" type="string" />
+              <element minOccurs="1" maxOccurs="1" name="business" type="boolean" />
+              <element minOccurs="0" maxOccurs="1" default="CHANGEABLE" name="status" type="tns:DriveLogStatus" />
             </sequence>
           </extension>
         </complexContent>
@@ -133,8 +167,8 @@
           <element minOccurs="1" maxOccurs="1" name="endTime" type="dateTime" />
           <element minOccurs="1" maxOccurs="1" name="endTimeZone" type="string" />
           <element minOccurs="1" maxOccurs="1" name="duration" type="long" />
-          <element minOccurs="0" maxOccurs="1" name="startPosition" type="sch:Position" />
-          <element minOccurs="0" maxOccurs="1" name="endPosition" type="sch:Position" />
+          <element minOccurs="0" maxOccurs="1" name="startPosition" type="tns:Position" />
+          <element minOccurs="0" maxOccurs="1" name="endPosition" type="tns:Position" />
           <element minOccurs="1" maxOccurs="1" name="closed" type="boolean" />
           <element minOccurs="1" maxOccurs="1" name="changed" type="boolean" />
           <element minOccurs="1" maxOccurs="1" name="lastModifiedTime" type="dateTime" />
@@ -153,59 +187,62 @@
       </complexType>
       <complexType name="WorkTimeQuery">
         <complexContent mixed="false">
-          <extension base="sch:RecordQuery">
+          <extension base="tns:RecordQuery">
             <sequence>
               <element minOccurs="0" maxOccurs="1" name="externalWorkItemId" type="string" />
               <element minOccurs="0" maxOccurs="1" name="description" type="string" />
+              <element minOccurs="0" maxOccurs="unbounded" name="statuses" type="tns:WorkTimeStatus" />
             </sequence>
           </extension>
         </complexContent>
       </complexType>
       <complexType name="ProjectTimeQuery">
         <complexContent mixed="false">
-          <extension base="sch:RecordQuery">
+          <extension base="tns:RecordQuery">
             <sequence>
               <element minOccurs="0" maxOccurs="1" name="externalTaskId" type="string" />
               <element minOccurs="0" maxOccurs="1" name="description" type="string" />
               <element minOccurs="0" maxOccurs="1" name="billable" type="boolean" />
+              <element minOccurs="0" maxOccurs="unbounded" name="statuses" type="tns:ProjectTimeStatus" />
             </sequence>
           </extension>
         </complexContent>
       </complexType>
       <complexType name="DriveLogQuery">
         <complexContent mixed="false">
-          <extension base="sch:RecordQuery">
+          <extension base="tns:RecordQuery">
             <sequence>
               <element minOccurs="0" maxOccurs="1" name="externalCarId" type="string" />
               <element minOccurs="0" maxOccurs="1" name="route" type="string" />
               <element minOccurs="0" maxOccurs="1" name="purpose" type="string" />
               <element minOccurs="0" maxOccurs="1" name="visited" type="string" />
               <element minOccurs="0" maxOccurs="1" name="business" type="boolean" />
+              <element minOccurs="0" maxOccurs="unbounded" name="statuses" type="tns:DriveLogStatus" />
             </sequence>
           </extension>
         </complexContent>
       </complexType>
-      <element name="GetWorkTimesRequest" type="sch:WorkTimeQuery" />
+      <element name="GetWorkTimesRequest" type="tns:WorkTimeQuery" />
       <element name="GetWorkTimesResponse">
         <complexType>
           <sequence>
-            <element minOccurs="0" maxOccurs="unbounded" name="workTimes" type="sch:WorkTime" />
+            <element minOccurs="0" maxOccurs="unbounded" name="workTimes" type="tns:WorkTime" />
           </sequence>
         </complexType>
       </element>
-      <element name="GetProjectTimesRequest" type="sch:ProjectTimeQuery" />
+      <element name="GetProjectTimesRequest" type="tns:ProjectTimeQuery" />
       <element name="GetProjectTimesResponse">
         <complexType>
           <sequence>
-            <element minOccurs="0" maxOccurs="unbounded" name="projectTimes" type="sch:ProjectTime" />
+            <element minOccurs="0" maxOccurs="unbounded" name="projectTimes" type="tns:ProjectTime" />
           </sequence>
         </complexType>
       </element>
-      <element name="GetDriveLogsRequest" type="sch:DriveLogQuery" />
+      <element name="GetDriveLogsRequest" type="tns:DriveLogQuery" />
       <element name="GetDriveLogsResponse">
         <complexType>
           <sequence>
-            <element minOccurs="0" maxOccurs="unbounded" name="driveLogs" type="sch:DriveLog" />
+            <element minOccurs="0" maxOccurs="unbounded" name="driveLogs" type="tns:DriveLog" />
           </sequence>
         </complexType>
       </element>
@@ -220,15 +257,17 @@
       <element name="GetTasksResponse">
         <complexType>
           <sequence>
-            <element minOccurs="0" maxOccurs="unbounded" name="tasks" type="sch:Task" />
+            <element minOccurs="0" maxOccurs="unbounded" name="tasks" type="tns:Task" />
           </sequence>
         </complexType>
       </element>
+      <element name="GetTaskRequest" type="string" />
+      <element name="GetTaskResponse" type="tns:Task" />
       <element name="GetUsersRequest" />
       <element name="GetUsersResponse">
         <complexType>
           <sequence>
-            <element minOccurs="0" maxOccurs="unbounded" name="users" type="sch:User" />
+            <element minOccurs="0" maxOccurs="unbounded" name="users" type="tns:User" />
           </sequence>
         </complexType>
       </element>
@@ -239,17 +278,26 @@
           <element minOccurs="0" maxOccurs="1" name="description" type="string" />
         </sequence>
       </complexType>
-      <element name="AddWorkItemRequest" type="sch:WorkItem" />
+      <element name="AddWorkItemRequest" type="tns:WorkItem" />
       <element name="AddWorkItemResponse" type="long" />
-      <element name="UpdateWorkItemRequest" type="sch:WorkItem" />
+      <element name="UpdateWorkItemRequest" type="tns:WorkItem" />
       <element name="UpdateWorkItemResponse" type="boolean" />
+      <element name="UpdateWorkItemIdRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="workItem" type="tns:WorkItem" />
+            <element minOccurs="1" maxOccurs="1" name="newExternalWorkItemId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateWorkItemIdResponse" type="boolean" />
       <element name="DeleteWorkItemRequest" type="string" />
       <element name="DeleteWorkItemResponse" type="boolean" />
       <element name="GetWorkItemsRequest" />
       <element name="GetWorkItemsResponse">
         <complexType>
           <sequence>
-            <element minOccurs="0" maxOccurs="unbounded" name="workItem" type="sch:WorkItem" />
+            <element minOccurs="0" maxOccurs="unbounded" name="workItem" type="tns:WorkItem" />
           </sequence>
         </complexType>
       </element>
@@ -260,17 +308,26 @@
           <element minOccurs="1" maxOccurs="1" name="plate" type="string" />
         </sequence>
       </complexType>
-      <element name="AddCarRequest" type="sch:Car" />
+      <element name="AddCarRequest" type="tns:Car" />
       <element name="AddCarResponse" type="long" />
-      <element name="UpdateCarRequest" type="sch:Car" />
+      <element name="UpdateCarRequest" type="tns:Car" />
       <element name="UpdateCarResponse" type="boolean" />
+      <element name="UpdateCarIdRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="car" type="tns:Car" />
+            <element minOccurs="1" maxOccurs="1" name="newExternalCarId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateCarIdResponse" type="boolean" />
       <element name="DeleteCarRequest" type="string" />
       <element name="DeleteCarResponse" type="boolean" />
       <element name="GetCarsRequest" />
       <element name="GetCarsResponse">
         <complexType>
           <sequence>
-            <element minOccurs="0" maxOccurs="unbounded" name="cars" type="sch:Car" />
+            <element minOccurs="0" maxOccurs="unbounded" name="cars" type="tns:Car" />
           </sequence>
         </complexType>
       </element>
@@ -292,268 +349,536 @@
         </complexType>
       </element>
       <element name="RemoveCarFromUserResponse" type="boolean" />
-      <element name="LockProjectTimesRequest" type="sch:LockProjectTimesRequestType" />
+      <element name="LockProjectTimesRequest" type="tns:LockProjectTimesRequestType" />
       <element name="LockProjectTimesResponseType" type="boolean" />
       <complexType name="LockProjectTimesRequestType">
         <sequence>
           <element minOccurs="0" maxOccurs="unbounded" name="ids" type="long" />
         </sequence>
       </complexType>
-      <element name="UnlockProjectTimesRequest" type="sch:LockProjectTimesRequestType" />
+      <element name="UnlockProjectTimesRequest" type="tns:LockProjectTimesRequestType" />
       <element name="UnlockProjectTimesResponseType" type="boolean" />
+      <complexType name="ProjectTimesStatusRequestType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="unbounded" name="ids" type="long" />
+          <element minOccurs="1" maxOccurs="1" name="status" type="tns:ProjectTimeStatus" />
+        </sequence>
+      </complexType>
+      <element name="SetProjectTimesStatusRequest" type="tns:ProjectTimesStatusRequestType" />
+      <element name="SetProjectTimesStatusResponseType" type="boolean" />
+      <complexType name="WorkTimesStatusRequestType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="unbounded" name="ids" type="long" />
+          <element minOccurs="1" maxOccurs="1" name="status" type="tns:WorkTimeStatus" />
+        </sequence>
+      </complexType>
+      <element name="SetWorkTimesStatusRequest" type="tns:WorkTimesStatusRequestType" />
+      <element name="SetWorkTimesStatusResponseType" type="boolean" />
+      <complexType name="DriveLogsStatusRequestType">
+        <sequence>
+          <element minOccurs="0" maxOccurs="unbounded" name="ids" type="long" />
+          <element minOccurs="1" maxOccurs="1" name="status" type="tns:DriveLogStatus" />
+        </sequence>
+      </complexType>
+      <element name="SetDriveLogsStatusRequest" type="tns:DriveLogsStatusRequestType" />
+      <element name="SetDriveLogsStatusResponseType" type="boolean" />
+      <simpleType name="WorkTimeStatus">
+        <restriction base="string">
+          <enumeration value="CHANGEABLE" />
+          <enumeration value="LOCKED" />
+          <enumeration value="CLOSED" />
+        </restriction>
+      </simpleType>
+      <simpleType name="ProjectTimeStatus">
+        <restriction base="string">
+          <enumeration value="CHANGEABLE" />
+          <enumeration value="LOCKED" />
+          <enumeration value="CLEARED" />
+          <enumeration value="CLOSED" />
+        </restriction>
+      </simpleType>
+      <simpleType name="DriveLogStatus">
+        <restriction base="string">
+          <enumeration value="CHANGEABLE" />
+          <enumeration value="LOCKED" />
+          <enumeration value="CLEARED" />
+          <enumeration value="CLOSED" />
+        </restriction>
+      </simpleType>
+      <element name="SaveWorkTimeRequest" type="tns:WorkTime" />
+      <element name="SaveWorkTimeResponse" type="long" />
+      <element name="SaveProjectTimeRequest" type="tns:ProjectTime" />
+      <element name="SaveProjectTimeResponse" type="long" />
+      <element name="SaveDriveLogRequest" type="tns:DriveLog" />
+      <element name="SaveDriveLogResponse" type="long" />
+      <complexType name="RunningRecord">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="id" type="long" />
+          <element minOccurs="1" maxOccurs="1" name="externalUserId" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="startTime" type="dateTime" />
+          <element minOccurs="1" maxOccurs="1" name="startTimeZone" type="string" />
+          <element minOccurs="0" maxOccurs="1" name="startPosition" type="tns:Position" />
+          <element minOccurs="1" maxOccurs="1" name="changed" type="boolean" />
+          <element minOccurs="1" maxOccurs="1" name="lastModifiedTime" type="dateTime" />
+          <element minOccurs="1" maxOccurs="1" name="lastModifiedTimeZone" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="breakTime" type="int" />
+        </sequence>
+      </complexType>
+      <complexType name="RunningWorkTime">
+        <complexContent mixed="false">
+          <extension base="tns:RunningRecord">
+            <sequence>
+              <element minOccurs="1" maxOccurs="1" name="externalWorkItemId" type="string" />
+              <element minOccurs="0" maxOccurs="1" name="description" type="string" />
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="GetRunningWorkTimesResponse">
+        <complexType>
+          <sequence>
+            <element minOccurs="0" maxOccurs="unbounded" name="runningWorkTimes" type="tns:RunningWorkTime" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetRunningWorkTimesRequest" />
+      <complexType name="RunningProjectTime">
+        <complexContent mixed="false">
+          <extension base="tns:RunningRecord">
+            <sequence>
+              <element minOccurs="1" maxOccurs="1" name="externalTaskId" type="string" />
+              <element minOccurs="1" maxOccurs="1" name="billable" type="boolean" />
+              <element minOccurs="0" maxOccurs="1" name="description" type="string" />
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="GetRunningProjectTimesResponse">
+        <complexType>
+          <sequence>
+            <element minOccurs="0" maxOccurs="unbounded" name="runningProjectTimes" type="tns:RunningProjectTime" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetRunningProjectTimesRequest" />
+      <complexType name="RunningDriveLog">
+        <complexContent mixed="false">
+          <extension base="tns:RunningRecord">
+            <sequence>
+              <element minOccurs="1" maxOccurs="1" name="externalCarId" type="string" />
+              <element minOccurs="1" maxOccurs="1" name="startMileage" type="long" />
+              <element minOccurs="0" maxOccurs="1" name="route" type="string" />
+              <element minOccurs="0" maxOccurs="1" name="purpose" type="string" />
+              <element minOccurs="0" maxOccurs="1" name="visited" type="string" />
+              <element minOccurs="1" maxOccurs="1" name="business" type="boolean" />
+            </sequence>
+          </extension>
+        </complexContent>
+      </complexType>
+      <element name="GetRunningDriveLogsResponse">
+        <complexType>
+          <sequence>
+            <element minOccurs="0" maxOccurs="unbounded" name="runningDriveLogs" type="tns:RunningDriveLog" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetRunningDriveLogRequest" />
     </schema>
   </wsdl:types>
-  <wsdl:message name="RemoveTaskFromUserResponse">
-    <wsdl:part name="RemoveTaskFromUserResponse" element="sch:RemoveTaskFromUserResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetCarsRequest">
-    <wsdl:part name="GetCarsRequest" element="sch:GetCarsRequest" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCarFromUserRequest">
-    <wsdl:part name="RemoveCarFromUserRequest" element="sch:RemoveCarFromUserRequest" />
-  </wsdl:message>
-  <wsdl:message name="UpdateTaskResponse">
-    <wsdl:part name="UpdateTaskResponse" element="sch:UpdateTaskResponse" />
-  </wsdl:message>
-  <wsdl:message name="DeleteWorkItemRequest">
-    <wsdl:part name="DeleteWorkItemRequest" element="sch:DeleteWorkItemRequest" />
+  <wsdl:message name="GetRunningProjectTimesRequest">
+    <wsdl:part name="GetRunningProjectTimesRequest" element="tns:GetRunningProjectTimesRequest" />
   </wsdl:message>
   <wsdl:message name="AssignTaskToUserResponse">
-    <wsdl:part name="AssignTaskToUserResponse" element="sch:AssignTaskToUserResponse" />
-  </wsdl:message>
-  <wsdl:message name="AssignCarToUserResponse">
-    <wsdl:part name="AssignCarToUserResponse" element="sch:AssignCarToUserResponse" />
-  </wsdl:message>
-  <wsdl:message name="AssignCarToUserRequest">
-    <wsdl:part name="AssignCarToUserRequest" element="sch:AssignCarToUserRequest" />
-  </wsdl:message>
-  <wsdl:message name="DeleteWorkItemResponse">
-    <wsdl:part name="DeleteWorkItemResponse" element="sch:DeleteWorkItemResponse" />
-  </wsdl:message>
-  <wsdl:message name="DeleteTaskResponse">
-    <wsdl:part name="DeleteTaskResponse" element="sch:DeleteTaskResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetWorkItemsResponse">
-    <wsdl:part name="GetWorkItemsResponse" element="sch:GetWorkItemsResponse" />
-  </wsdl:message>
-  <wsdl:message name="AddCarRequest">
-    <wsdl:part name="AddCarRequest" element="sch:AddCarRequest" />
-  </wsdl:message>
-  <wsdl:message name="AddTaskRequest">
-    <wsdl:part name="AddTaskRequest" element="sch:AddTaskRequest" />
-  </wsdl:message>
-  <wsdl:message name="GetTasksRequest">
-    <wsdl:part name="GetTasksRequest" element="sch:GetTasksRequest" />
-  </wsdl:message>
-  <wsdl:message name="UpdateCarRequest">
-    <wsdl:part name="UpdateCarRequest" element="sch:UpdateCarRequest" />
-  </wsdl:message>
-  <wsdl:message name="GetUsersResponse">
-    <wsdl:part name="GetUsersResponse" element="sch:GetUsersResponse" />
-  </wsdl:message>
-  <wsdl:message name="AssignTaskToUserRequest">
-    <wsdl:part name="AssignTaskToUserRequest" element="sch:AssignTaskToUserRequest" />
-  </wsdl:message>
-  <wsdl:message name="UpdateTaskRequest">
-    <wsdl:part name="UpdateTaskRequest" element="sch:UpdateTaskRequest" />
-  </wsdl:message>
-  <wsdl:message name="GetWorkItemsRequest">
-    <wsdl:part name="GetWorkItemsRequest" element="sch:GetWorkItemsRequest" />
-  </wsdl:message>
-  <wsdl:message name="AddUserResponse">
-    <wsdl:part name="AddUserResponse" element="sch:AddUserResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetDriveLogsRequest">
-    <wsdl:part name="GetDriveLogsRequest" element="sch:GetDriveLogsRequest" />
-  </wsdl:message>
-  <wsdl:message name="DeleteUserRequest">
-    <wsdl:part name="DeleteUserRequest" element="sch:DeleteUserRequest" />
-  </wsdl:message>
-  <wsdl:message name="GetProjectTimesRequest">
-    <wsdl:part name="GetProjectTimesRequest" element="sch:GetProjectTimesRequest" />
-  </wsdl:message>
-  <wsdl:message name="DeleteCarRequest">
-    <wsdl:part name="DeleteCarRequest" element="sch:DeleteCarRequest" />
-  </wsdl:message>
-  <wsdl:message name="DeleteTaskRequest">
-    <wsdl:part name="DeleteTaskRequest" element="sch:DeleteTaskRequest" />
-  </wsdl:message>
-  <wsdl:message name="AddUserRequest">
-    <wsdl:part name="AddUserRequest" element="sch:AddUserRequest" />
-  </wsdl:message>
-  <wsdl:message name="LockProjectTimesRequest">
-    <wsdl:part name="LockProjectTimesRequest" element="sch:LockProjectTimesRequest" />
-  </wsdl:message>
-  <wsdl:message name="DeleteUserResponse">
-    <wsdl:part name="DeleteUserResponse" element="sch:DeleteUserResponse" />
-  </wsdl:message>
-  <wsdl:message name="UpdateWorkItemRequest">
-    <wsdl:part name="UpdateWorkItemRequest" element="sch:UpdateWorkItemRequest" />
-  </wsdl:message>
-  <wsdl:message name="UpdateCarResponse">
-    <wsdl:part name="UpdateCarResponse" element="sch:UpdateCarResponse" />
-  </wsdl:message>
-  <wsdl:message name="AddWorkItemResponse">
-    <wsdl:part name="AddWorkItemResponse" element="sch:AddWorkItemResponse" />
-  </wsdl:message>
-  <wsdl:message name="UpdateUserRequest">
-    <wsdl:part name="UpdateUserRequest" element="sch:UpdateUserRequest" />
-  </wsdl:message>
-  <wsdl:message name="GetDriveLogsResponse">
-    <wsdl:part name="GetDriveLogsResponse" element="sch:GetDriveLogsResponse" />
-  </wsdl:message>
-  <wsdl:message name="RemoveTaskFromUserRequest">
-    <wsdl:part name="RemoveTaskFromUserRequest" element="sch:RemoveTaskFromUserRequest" />
-  </wsdl:message>
-  <wsdl:message name="AddCarResponse">
-    <wsdl:part name="AddCarResponse" element="sch:AddCarResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetProjectTimesResponse">
-    <wsdl:part name="GetProjectTimesResponse" element="sch:GetProjectTimesResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetTasksResponse">
-    <wsdl:part name="GetTasksResponse" element="sch:GetTasksResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetUsersRequest">
-    <wsdl:part name="GetUsersRequest" element="sch:GetUsersRequest" />
-  </wsdl:message>
-  <wsdl:message name="UpdateWorkItemResponse">
-    <wsdl:part name="UpdateWorkItemResponse" element="sch:UpdateWorkItemResponse" />
-  </wsdl:message>
-  <wsdl:message name="GetWorkTimesResponse">
-    <wsdl:part name="GetWorkTimesResponse" element="sch:GetWorkTimesResponse" />
-  </wsdl:message>
-  <wsdl:message name="UnlockProjectTimesRequest">
-    <wsdl:part name="UnlockProjectTimesRequest" element="sch:UnlockProjectTimesRequest" />
-  </wsdl:message>
-  <wsdl:message name="GetCarsResponse">
-    <wsdl:part name="GetCarsResponse" element="sch:GetCarsResponse" />
-  </wsdl:message>
-  <wsdl:message name="AddWorkItemRequest">
-    <wsdl:part name="AddWorkItemRequest" element="sch:AddWorkItemRequest" />
-  </wsdl:message>
-  <wsdl:message name="GetWorkTimesRequest">
-    <wsdl:part name="GetWorkTimesRequest" element="sch:GetWorkTimesRequest" />
-  </wsdl:message>
-  <wsdl:message name="AddTaskResponse">
-    <wsdl:part name="AddTaskResponse" element="sch:AddTaskResponse" />
-  </wsdl:message>
-  <wsdl:message name="RemoveCarFromUserResponse">
-    <wsdl:part name="RemoveCarFromUserResponse" element="sch:RemoveCarFromUserResponse" />
+    <wsdl:part name="AssignTaskToUserResponse" element="tns:AssignTaskToUserResponse" />
   </wsdl:message>
   <wsdl:message name="DeleteCarResponse">
-    <wsdl:part name="DeleteCarResponse" element="sch:DeleteCarResponse" />
+    <wsdl:part name="DeleteCarResponse" element="tns:DeleteCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCarRequest">
+    <wsdl:part name="DeleteCarRequest" element="tns:DeleteCarRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateWorkItemIdResponse">
+    <wsdl:part name="UpdateWorkItemIdResponse" element="tns:UpdateWorkItemIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCarRequest">
+    <wsdl:part name="UpdateCarRequest" element="tns:UpdateCarRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserIdResponse">
+    <wsdl:part name="UpdateUserIdResponse" element="tns:UpdateUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksRequest">
+    <wsdl:part name="GetTasksRequest" element="tns:GetTasksRequest" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectTimeResponse">
+    <wsdl:part name="SaveProjectTimeResponse" element="tns:SaveProjectTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddWorkItemResponse">
+    <wsdl:part name="AddWorkItemResponse" element="tns:AddWorkItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserResponse">
+    <wsdl:part name="AddUserResponse" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDriveLogsStatusRequest">
+    <wsdl:part name="SetDriveLogsStatusRequest" element="tns:SetDriveLogsStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="SaveWorkTimeRequest">
+    <wsdl:part name="SaveWorkTimeRequest" element="tns:SaveWorkTimeRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddCarRequest">
+    <wsdl:part name="AddCarRequest" element="tns:AddCarRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTaskRequest">
+    <wsdl:part name="UpdateTaskRequest" element="tns:UpdateTaskRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTaskRequest">
+    <wsdl:part name="DeleteTaskRequest" element="tns:DeleteTaskRequest" />
+  </wsdl:message>
+  <wsdl:message name="RemoveTaskFromUserResponse">
+    <wsdl:part name="RemoveTaskFromUserResponse" element="tns:RemoveTaskFromUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRunningDriveLogRequest">
+    <wsdl:part name="GetRunningDriveLogRequest" element="tns:GetRunningDriveLogRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetRunningDriveLogsResponse">
+    <wsdl:part name="GetRunningDriveLogsResponse" element="tns:GetRunningDriveLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserRequest">
+    <wsdl:part name="DeleteUserRequest" element="tns:DeleteUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkTimesResponse">
+    <wsdl:part name="GetWorkTimesResponse" element="tns:GetWorkTimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserRequest">
+    <wsdl:part name="AddUserRequest" element="tns:AddUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCarFromUserRequest">
+    <wsdl:part name="RemoveCarFromUserRequest" element="tns:RemoveCarFromUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetRunningWorkTimesRequest">
+    <wsdl:part name="GetRunningWorkTimesRequest" element="tns:GetRunningWorkTimesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectTimesResponse">
+    <wsdl:part name="GetProjectTimesResponse" element="tns:GetProjectTimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWorkItemResponse">
+    <wsdl:part name="DeleteWorkItemResponse" element="tns:DeleteWorkItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCarIdResponse">
+    <wsdl:part name="UpdateCarIdResponse" element="tns:UpdateCarIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddTaskResponse">
+    <wsdl:part name="AddTaskResponse" element="tns:AddTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDriveLogRequest">
+    <wsdl:part name="SaveDriveLogRequest" element="tns:SaveDriveLogRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateWorkItemIdRequest">
+    <wsdl:part name="UpdateWorkItemIdRequest" element="tns:UpdateWorkItemIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTaskIdRequest">
+    <wsdl:part name="UpdateTaskIdRequest" element="tns:UpdateTaskIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateWorkItemRequest">
+    <wsdl:part name="UpdateWorkItemRequest" element="tns:UpdateWorkItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCarResponse">
+    <wsdl:part name="UpdateCarResponse" element="tns:UpdateCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersRequest">
+    <wsdl:part name="GetUsersRequest" element="tns:GetUsersRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserIdRequest">
+    <wsdl:part name="UpdateUserIdRequest" element="tns:UpdateUserIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkItemsRequest">
+    <wsdl:part name="GetWorkItemsRequest" element="tns:GetWorkItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddTaskRequest">
+    <wsdl:part name="AddTaskRequest" element="tns:AddTaskRequest" />
+  </wsdl:message>
+  <wsdl:message name="AssignCarToUserResponse">
+    <wsdl:part name="AssignCarToUserResponse" element="tns:AssignCarToUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsResponse">
+    <wsdl:part name="GetCarsResponse" element="tns:GetCarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkItemsResponse">
+    <wsdl:part name="GetWorkItemsResponse" element="tns:GetWorkItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRequest">
+    <wsdl:part name="UpdateUserRequest" element="tns:UpdateUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersResponse">
+    <wsdl:part name="GetUsersResponse" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateWorkItemResponse">
+    <wsdl:part name="UpdateWorkItemResponse" element="tns:UpdateWorkItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveTaskFromUserRequest">
+    <wsdl:part name="RemoveTaskFromUserRequest" element="tns:RemoveTaskFromUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskRequest">
+    <wsdl:part name="GetTaskRequest" element="tns:GetTaskRequest" />
+  </wsdl:message>
+  <wsdl:message name="AssignCarToUserRequest">
+    <wsdl:part name="AssignCarToUserRequest" element="tns:AssignCarToUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTaskResponse">
+    <wsdl:part name="UpdateTaskResponse" element="tns:UpdateTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectTimesRequest">
+    <wsdl:part name="GetProjectTimesRequest" element="tns:GetProjectTimesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetRunningWorkTimesResponse">
+    <wsdl:part name="GetRunningWorkTimesResponse" element="tns:GetRunningWorkTimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTasksResponse">
+    <wsdl:part name="GetTasksResponse" element="tns:GetTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWorkItemRequest">
+    <wsdl:part name="DeleteWorkItemRequest" element="tns:DeleteWorkItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetDriveLogsResponse">
+    <wsdl:part name="GetDriveLogsResponse" element="tns:GetDriveLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCarsRequest">
+    <wsdl:part name="GetCarsRequest" element="tns:GetCarsRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetProjectTimesStatusRequest">
+    <wsdl:part name="SetProjectTimesStatusRequest" element="tns:SetProjectTimesStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="LockProjectTimesRequest">
+    <wsdl:part name="LockProjectTimesRequest" element="tns:LockProjectTimesRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetTaskExternalIdRequest">
+    <wsdl:part name="SetTaskExternalIdRequest" element="tns:SetTaskExternalIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetTaskExternalIdResponse">
+    <wsdl:part name="SetTaskExternalIdResponse" element="tns:SetTaskExternalIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserResponse">
+    <wsdl:part name="DeleteUserResponse" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCarIdRequest">
+    <wsdl:part name="UpdateCarIdRequest" element="tns:UpdateCarIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkTimesRequest">
+    <wsdl:part name="GetWorkTimesRequest" element="tns:GetWorkTimesRequest" />
+  </wsdl:message>
+  <wsdl:message name="SaveProjectTimeRequest">
+    <wsdl:part name="SaveProjectTimeRequest" element="tns:SaveProjectTimeRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddCarResponse">
+    <wsdl:part name="AddCarResponse" element="tns:AddCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskResponse">
+    <wsdl:part name="GetTaskResponse" element="tns:GetTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetWorkTimesStatusRequest">
+    <wsdl:part name="SetWorkTimesStatusRequest" element="tns:SetWorkTimesStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="SaveWorkTimeResponse">
+    <wsdl:part name="SaveWorkTimeResponse" element="tns:SaveWorkTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDriveLogsRequest">
+    <wsdl:part name="GetDriveLogsRequest" element="tns:GetDriveLogsRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddWorkItemRequest">
+    <wsdl:part name="AddWorkItemRequest" element="tns:AddWorkItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCarFromUserResponse">
+    <wsdl:part name="RemoveCarFromUserResponse" element="tns:RemoveCarFromUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDriveLogResponse">
+    <wsdl:part name="SaveDriveLogResponse" element="tns:SaveDriveLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignTaskToUserRequest">
+    <wsdl:part name="AssignTaskToUserRequest" element="tns:AssignTaskToUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetRunningProjectTimesResponse">
+    <wsdl:part name="GetRunningProjectTimesResponse" element="tns:GetRunningProjectTimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnlockProjectTimesRequest">
+    <wsdl:part name="UnlockProjectTimesRequest" element="tns:UnlockProjectTimesRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTaskResponse">
+    <wsdl:part name="DeleteTaskResponse" element="tns:DeleteTaskResponse" />
   </wsdl:message>
   <wsdl:message name="UpdateUserResponse">
-    <wsdl:part name="UpdateUserResponse" element="sch:UpdateUserResponse" />
+    <wsdl:part name="UpdateUserResponse" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTaskIdResponse">
+    <wsdl:part name="UpdateTaskIdResponse" element="tns:UpdateTaskIdResponse" />
   </wsdl:message>
   <wsdl:portType name="TimrSync">
-    <wsdl:operation name="LockProjectTimes">
-      <wsdl:input name="LockProjectTimesRequest" message="sch:LockProjectTimesRequest" />
+    <wsdl:operation name="GetRunningProjectTimes">
+      <wsdl:input name="GetRunningProjectTimesRequest" message="tns:GetRunningProjectTimesRequest" />
+      <wsdl:output name="GetRunningProjectTimesResponse" message="tns:GetRunningProjectTimesResponse" />
     </wsdl:operation>
     <wsdl:operation name="AssignTaskToUser">
-      <wsdl:input name="AssignTaskToUserRequest" message="sch:AssignTaskToUserRequest" />
-      <wsdl:output name="AssignTaskToUserResponse" message="sch:AssignTaskToUserResponse" />
+      <wsdl:input name="AssignTaskToUserRequest" message="tns:AssignTaskToUserRequest" />
+      <wsdl:output name="AssignTaskToUserResponse" message="tns:AssignTaskToUserResponse" />
     </wsdl:operation>
     <wsdl:operation name="DeleteCar">
-      <wsdl:input name="DeleteCarRequest" message="sch:DeleteCarRequest" />
-      <wsdl:output name="DeleteCarResponse" message="sch:DeleteCarResponse" />
+      <wsdl:input name="DeleteCarRequest" message="tns:DeleteCarRequest" />
+      <wsdl:output name="DeleteCarResponse" message="tns:DeleteCarResponse" />
     </wsdl:operation>
-    <wsdl:operation name="GetCars">
-      <wsdl:input name="GetCarsRequest" message="sch:GetCarsRequest" />
-      <wsdl:output name="GetCarsResponse" message="sch:GetCarsResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="GetWorkTimes">
-      <wsdl:input name="GetWorkTimesRequest" message="sch:GetWorkTimesRequest" />
-      <wsdl:output name="GetWorkTimesResponse" message="sch:GetWorkTimesResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateTask">
-      <wsdl:input name="UpdateTaskRequest" message="sch:UpdateTaskRequest" />
-      <wsdl:output name="UpdateTaskResponse" message="sch:UpdateTaskResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="DeleteUser">
-      <wsdl:input name="DeleteUserRequest" message="sch:DeleteUserRequest" />
-      <wsdl:output name="DeleteUserResponse" message="sch:DeleteUserResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="DeleteTask">
-      <wsdl:input name="DeleteTaskRequest" message="sch:DeleteTaskRequest" />
-      <wsdl:output name="DeleteTaskResponse" message="sch:DeleteTaskResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="GetProjectTimes">
-      <wsdl:input name="GetProjectTimesRequest" message="sch:GetProjectTimesRequest" />
-      <wsdl:output name="GetProjectTimesResponse" message="sch:GetProjectTimesResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="GetDriveLogs">
-      <wsdl:input name="GetDriveLogsRequest" message="sch:GetDriveLogsRequest" />
-      <wsdl:output name="GetDriveLogsResponse" message="sch:GetDriveLogsResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateUser">
-      <wsdl:input name="UpdateUserRequest" message="sch:UpdateUserRequest" />
-      <wsdl:output name="UpdateUserResponse" message="sch:UpdateUserResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveTaskFromUser">
-      <wsdl:input name="RemoveTaskFromUserRequest" message="sch:RemoveTaskFromUserRequest" />
-      <wsdl:output name="RemoveTaskFromUserResponse" message="sch:RemoveTaskFromUserResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="UnlockProjectTimes">
-      <wsdl:input name="UnlockProjectTimesRequest" message="sch:UnlockProjectTimesRequest" />
-    </wsdl:operation>
-    <wsdl:operation name="AddUser">
-      <wsdl:input name="AddUserRequest" message="sch:AddUserRequest" />
-      <wsdl:output name="AddUserResponse" message="sch:AddUserResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCarFromUser">
-      <wsdl:input name="RemoveCarFromUserRequest" message="sch:RemoveCarFromUserRequest" />
-      <wsdl:output name="RemoveCarFromUserResponse" message="sch:RemoveCarFromUserResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="DeleteWorkItem">
-      <wsdl:input name="DeleteWorkItemRequest" message="sch:DeleteWorkItemRequest" />
-      <wsdl:output name="DeleteWorkItemResponse" message="sch:DeleteWorkItemResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="GetTasks">
-      <wsdl:input name="GetTasksRequest" message="sch:GetTasksRequest" />
-      <wsdl:output name="GetTasksResponse" message="sch:GetTasksResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="AddCar">
-      <wsdl:input name="AddCarRequest" message="sch:AddCarRequest" />
-      <wsdl:output name="AddCarResponse" message="sch:AddCarResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="AddWorkItem">
-      <wsdl:input name="AddWorkItemRequest" message="sch:AddWorkItemRequest" />
-      <wsdl:output name="AddWorkItemResponse" message="sch:AddWorkItemResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="GetUsers">
-      <wsdl:input name="GetUsersRequest" message="sch:GetUsersRequest" />
-      <wsdl:output name="GetUsersResponse" message="sch:GetUsersResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="GetWorkItems">
-      <wsdl:input name="GetWorkItemsRequest" message="sch:GetWorkItemsRequest" />
-      <wsdl:output name="GetWorkItemsResponse" message="sch:GetWorkItemsResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="AssignCarToUser">
-      <wsdl:input name="AssignCarToUserRequest" message="sch:AssignCarToUserRequest" />
-      <wsdl:output name="AssignCarToUserResponse" message="sch:AssignCarToUserResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="AddTask">
-      <wsdl:input name="AddTaskRequest" message="sch:AddTaskRequest" />
-      <wsdl:output name="AddTaskResponse" message="sch:AddTaskResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateWorkItem">
-      <wsdl:input name="UpdateWorkItemRequest" message="sch:UpdateWorkItemRequest" />
-      <wsdl:output name="UpdateWorkItemResponse" message="sch:UpdateWorkItemResponse" />
+    <wsdl:operation name="UpdateWorkItemId">
+      <wsdl:input name="UpdateWorkItemIdRequest" message="tns:UpdateWorkItemIdRequest" />
+      <wsdl:output name="UpdateWorkItemIdResponse" message="tns:UpdateWorkItemIdResponse" />
     </wsdl:operation>
     <wsdl:operation name="UpdateCar">
-      <wsdl:input name="UpdateCarRequest" message="sch:UpdateCarRequest" />
-      <wsdl:output name="UpdateCarResponse" message="sch:UpdateCarResponse" />
+      <wsdl:input name="UpdateCarRequest" message="tns:UpdateCarRequest" />
+      <wsdl:output name="UpdateCarResponse" message="tns:UpdateCarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserId">
+      <wsdl:input name="UpdateUserIdRequest" message="tns:UpdateUserIdRequest" />
+      <wsdl:output name="UpdateUserIdResponse" message="tns:UpdateUserIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTasks">
+      <wsdl:input name="GetTasksRequest" message="tns:GetTasksRequest" />
+      <wsdl:output name="GetTasksResponse" message="tns:GetTasksResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveProjectTime">
+      <wsdl:input name="SaveProjectTimeRequest" message="tns:SaveProjectTimeRequest" />
+      <wsdl:output name="SaveProjectTimeResponse" message="tns:SaveProjectTimeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWorkItem">
+      <wsdl:input name="AddWorkItemRequest" message="tns:AddWorkItemRequest" />
+      <wsdl:output name="AddWorkItemResponse" message="tns:AddWorkItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input name="AddUserRequest" message="tns:AddUserRequest" />
+      <wsdl:output name="AddUserResponse" message="tns:AddUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDriveLogsStatus">
+      <wsdl:input name="SetDriveLogsStatusRequest" message="tns:SetDriveLogsStatusRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkTime">
+      <wsdl:input name="SaveWorkTimeRequest" message="tns:SaveWorkTimeRequest" />
+      <wsdl:output name="SaveWorkTimeResponse" message="tns:SaveWorkTimeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCar">
+      <wsdl:input name="AddCarRequest" message="tns:AddCarRequest" />
+      <wsdl:output name="AddCarResponse" message="tns:AddCarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTask">
+      <wsdl:input name="UpdateTaskRequest" message="tns:UpdateTaskRequest" />
+      <wsdl:output name="UpdateTaskResponse" message="tns:UpdateTaskResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTask">
+      <wsdl:input name="DeleteTaskRequest" message="tns:DeleteTaskRequest" />
+      <wsdl:output name="DeleteTaskResponse" message="tns:DeleteTaskResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTaskFromUser">
+      <wsdl:input name="RemoveTaskFromUserRequest" message="tns:RemoveTaskFromUserRequest" />
+      <wsdl:output name="RemoveTaskFromUserResponse" message="tns:RemoveTaskFromUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningDriveLog">
+      <wsdl:input name="GetRunningDriveLogRequest" message="tns:GetRunningDriveLogRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningDriveLogs">
+      <wsdl:output name="GetRunningDriveLogsResponse" message="tns:GetRunningDriveLogsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input name="DeleteUserRequest" message="tns:DeleteUserRequest" />
+      <wsdl:output name="DeleteUserResponse" message="tns:DeleteUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkTimes">
+      <wsdl:input name="GetWorkTimesRequest" message="tns:GetWorkTimesRequest" />
+      <wsdl:output name="GetWorkTimesResponse" message="tns:GetWorkTimesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCarFromUser">
+      <wsdl:input name="RemoveCarFromUserRequest" message="tns:RemoveCarFromUserRequest" />
+      <wsdl:output name="RemoveCarFromUserResponse" message="tns:RemoveCarFromUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningWorkTimes">
+      <wsdl:input name="GetRunningWorkTimesRequest" message="tns:GetRunningWorkTimesRequest" />
+      <wsdl:output name="GetRunningWorkTimesResponse" message="tns:GetRunningWorkTimesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectTimes">
+      <wsdl:input name="GetProjectTimesRequest" message="tns:GetProjectTimesRequest" />
+      <wsdl:output name="GetProjectTimesResponse" message="tns:GetProjectTimesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkItem">
+      <wsdl:input name="DeleteWorkItemRequest" message="tns:DeleteWorkItemRequest" />
+      <wsdl:output name="DeleteWorkItemResponse" message="tns:DeleteWorkItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarId">
+      <wsdl:input name="UpdateCarIdRequest" message="tns:UpdateCarIdRequest" />
+      <wsdl:output name="UpdateCarIdResponse" message="tns:UpdateCarIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTask">
+      <wsdl:input name="AddTaskRequest" message="tns:AddTaskRequest" />
+      <wsdl:output name="AddTaskResponse" message="tns:AddTaskResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDriveLog">
+      <wsdl:input name="SaveDriveLogRequest" message="tns:SaveDriveLogRequest" />
+      <wsdl:output name="SaveDriveLogResponse" message="tns:SaveDriveLogResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaskId">
+      <wsdl:input name="UpdateTaskIdRequest" message="tns:UpdateTaskIdRequest" />
+      <wsdl:output name="UpdateTaskIdResponse" message="tns:UpdateTaskIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkItem">
+      <wsdl:input name="UpdateWorkItemRequest" message="tns:UpdateWorkItemRequest" />
+      <wsdl:output name="UpdateWorkItemResponse" message="tns:UpdateWorkItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input name="GetUsersRequest" message="tns:GetUsersRequest" />
+      <wsdl:output name="GetUsersResponse" message="tns:GetUsersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkItems">
+      <wsdl:input name="GetWorkItemsRequest" message="tns:GetWorkItemsRequest" />
+      <wsdl:output name="GetWorkItemsResponse" message="tns:GetWorkItemsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignCarToUser">
+      <wsdl:input name="AssignCarToUserRequest" message="tns:AssignCarToUserRequest" />
+      <wsdl:output name="AssignCarToUserResponse" message="tns:AssignCarToUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCars">
+      <wsdl:input name="GetCarsRequest" message="tns:GetCarsRequest" />
+      <wsdl:output name="GetCarsResponse" message="tns:GetCarsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input name="UpdateUserRequest" message="tns:UpdateUserRequest" />
+      <wsdl:output name="UpdateUserResponse" message="tns:UpdateUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTask">
+      <wsdl:input name="GetTaskRequest" message="tns:GetTaskRequest" />
+      <wsdl:output name="GetTaskResponse" message="tns:GetTaskResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDriveLogs">
+      <wsdl:input name="GetDriveLogsRequest" message="tns:GetDriveLogsRequest" />
+      <wsdl:output name="GetDriveLogsResponse" message="tns:GetDriveLogsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetProjectTimesStatus">
+      <wsdl:input name="SetProjectTimesStatusRequest" message="tns:SetProjectTimesStatusRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="LockProjectTimes">
+      <wsdl:input name="LockProjectTimesRequest" message="tns:LockProjectTimesRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTaskExternalId">
+      <wsdl:input name="SetTaskExternalIdRequest" message="tns:SetTaskExternalIdRequest" />
+      <wsdl:output name="SetTaskExternalIdResponse" message="tns:SetTaskExternalIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWorkTimesStatus">
+      <wsdl:input name="SetWorkTimesStatusRequest" message="tns:SetWorkTimesStatusRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockProjectTimes">
+      <wsdl:input name="UnlockProjectTimesRequest" message="tns:UnlockProjectTimesRequest" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="TimrSyncSoap11" type="sch:TimrSync">
+  <wsdl:binding name="TimrSyncSoap11" type="tns:TimrSync">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="LockProjectTimes">
+    <wsdl:operation name="GetRunningProjectTimes">
       <soap:operation soapAction="" />
-      <wsdl:input name="LockProjectTimesRequest">
+      <wsdl:input name="GetRunningProjectTimesRequest">
         <soap:body use="literal" />
       </wsdl:input>
+      <wsdl:output name="GetRunningProjectTimesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AssignTaskToUser">
       <soap:operation soapAction="" />
@@ -573,117 +898,30 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetCars">
+    <wsdl:operation name="UpdateWorkItemId">
       <soap:operation soapAction="" />
-      <wsdl:input name="GetCarsRequest">
+      <wsdl:input name="UpdateWorkItemIdRequest">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="GetCarsResponse">
+      <wsdl:output name="UpdateWorkItemIdResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetWorkTimes">
+    <wsdl:operation name="UpdateCar">
       <soap:operation soapAction="" />
-      <wsdl:input name="GetWorkTimesRequest">
+      <wsdl:input name="UpdateCarRequest">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="GetWorkTimesResponse">
+      <wsdl:output name="UpdateCarResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateTask">
+    <wsdl:operation name="UpdateUserId">
       <soap:operation soapAction="" />
-      <wsdl:input name="UpdateTaskRequest">
+      <wsdl:input name="UpdateUserIdRequest">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="UpdateTaskResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="DeleteUser">
-      <soap:operation soapAction="" />
-      <wsdl:input name="DeleteUserRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DeleteUserResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="DeleteTask">
-      <soap:operation soapAction="" />
-      <wsdl:input name="DeleteTaskRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DeleteTaskResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetProjectTimes">
-      <soap:operation soapAction="" />
-      <wsdl:input name="GetProjectTimesRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="GetProjectTimesResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDriveLogs">
-      <soap:operation soapAction="" />
-      <wsdl:input name="GetDriveLogsRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="GetDriveLogsResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateUser">
-      <soap:operation soapAction="" />
-      <wsdl:input name="UpdateUserRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="UpdateUserResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveTaskFromUser">
-      <soap:operation soapAction="" />
-      <wsdl:input name="RemoveTaskFromUserRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="RemoveTaskFromUserResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UnlockProjectTimes">
-      <soap:operation soapAction="" />
-      <wsdl:input name="UnlockProjectTimesRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="AddUser">
-      <soap:operation soapAction="" />
-      <wsdl:input name="AddUserRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="AddUserResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="RemoveCarFromUser">
-      <soap:operation soapAction="" />
-      <wsdl:input name="RemoveCarFromUserRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="RemoveCarFromUserResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="DeleteWorkItem">
-      <soap:operation soapAction="" />
-      <wsdl:input name="DeleteWorkItemRequest">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DeleteWorkItemResponse">
+      <wsdl:output name="UpdateUserIdResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -696,12 +934,12 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddCar">
+    <wsdl:operation name="SaveProjectTime">
       <soap:operation soapAction="" />
-      <wsdl:input name="AddCarRequest">
+      <wsdl:input name="SaveProjectTimeRequest">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="AddCarResponse">
+      <wsdl:output name="SaveProjectTimeResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -711,6 +949,177 @@
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="AddWorkItemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDriveLogsStatus">
+      <soap:operation soapAction="" />
+      <wsdl:input name="SetDriveLogsStatusRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWorkTime">
+      <soap:operation soapAction="" />
+      <wsdl:input name="SaveWorkTimeRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaveWorkTimeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCar">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddCarRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddCarResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTask">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateTaskRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateTaskResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTask">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteTaskRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteTaskResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTaskFromUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="RemoveTaskFromUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RemoveTaskFromUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningDriveLog">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetRunningDriveLogRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningDriveLogs">
+      <soap:operation soapAction="" />
+      <wsdl:output name="GetRunningDriveLogsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkTimes">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetWorkTimesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetWorkTimesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCarFromUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="RemoveCarFromUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RemoveCarFromUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningWorkTimes">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetRunningWorkTimesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetRunningWorkTimesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectTimes">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetProjectTimesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetProjectTimesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkItem">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteWorkItemRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteWorkItemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCarId">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateCarIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateCarIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTask">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddTaskRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddTaskResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDriveLog">
+      <soap:operation soapAction="" />
+      <wsdl:input name="SaveDriveLogRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SaveDriveLogResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaskId">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateTaskIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateTaskIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkItem">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateWorkItemRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateWorkItemResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -741,37 +1150,79 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="AddTask">
+    <wsdl:operation name="GetCars">
       <soap:operation soapAction="" />
-      <wsdl:input name="AddTaskRequest">
+      <wsdl:input name="GetCarsRequest">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="AddTaskResponse">
+      <wsdl:output name="GetCarsResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateWorkItem">
+    <wsdl:operation name="UpdateUser">
       <soap:operation soapAction="" />
-      <wsdl:input name="UpdateWorkItemRequest">
+      <wsdl:input name="UpdateUserRequest">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="UpdateWorkItemResponse">
+      <wsdl:output name="UpdateUserResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateCar">
+    <wsdl:operation name="GetTask">
       <soap:operation soapAction="" />
-      <wsdl:input name="UpdateCarRequest">
+      <wsdl:input name="GetTaskRequest">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="UpdateCarResponse">
+      <wsdl:output name="GetTaskResponse">
         <soap:body use="literal" />
       </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDriveLogs">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetDriveLogsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDriveLogsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetProjectTimesStatus">
+      <soap:operation soapAction="" />
+      <wsdl:input name="SetProjectTimesStatusRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="LockProjectTimes">
+      <soap:operation soapAction="" />
+      <wsdl:input name="LockProjectTimesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SetTaskExternalId">
+      <soap:operation soapAction="" />
+      <wsdl:input name="SetTaskExternalIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SetTaskExternalIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWorkTimesStatus">
+      <soap:operation soapAction="" />
+      <wsdl:input name="SetWorkTimesStatusRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockProjectTimes">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UnlockProjectTimesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="TimrSyncService">
-    <wsdl:port name="TimrSyncSoap11" binding="sch:TimrSyncSoap11">
-      <soap:address location="http://localhost:8080/timrsync" />
+    <wsdl:port name="TimrSyncSoap11" binding="tns:TimrSyncSoap11">
+      <soap:address location="https://timrsync.timr.com/timr/timrsync" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
