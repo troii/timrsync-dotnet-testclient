@@ -14,17 +14,16 @@
 #pragma warning disable 1591
 
 namespace TimrSyncTest.TimrSyncWebService {
-    using System;
-    using System.Web.Services;
     using System.Diagnostics;
-    using System.Web.Services.Protocols;
+    using System;
     using System.Xml.Serialization;
     using System.ComponentModel;
+    using System.Web.Services.Protocols;
+    using System.Web.Services;
     
     
     /// <remarks/>
-    // CODEGEN: The operation 'GetRunningDriveLogs' from namespace 'http://timr.com/timrsync' was ignored.  Notification is not supported.
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="TimrSyncSoap11", Namespace="http://timr.com/timrsync")]
@@ -33,49 +32,31 @@ namespace TimrSyncTest.TimrSyncWebService {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Record))]
     public partial class TimrSyncService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback GetRunningProjectTimesOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback AssignTaskToUserOperationCompleted;
-        
         private System.Threading.SendOrPostCallback DeleteCarOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback UpdateWorkItemIdOperationCompleted;
         
         private System.Threading.SendOrPostCallback UpdateCarOperationCompleted;
         
-        private System.Threading.SendOrPostCallback UpdateUserIdOperationCompleted;
-        
         private System.Threading.SendOrPostCallback GetTasksOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback SaveProjectTimeOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback AddWorkItemOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback AddUserOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback SetDriveLogsStatusOperationCompleted;
         
         private System.Threading.SendOrPostCallback SaveWorkTimeOperationCompleted;
         
         private System.Threading.SendOrPostCallback AddCarOperationCompleted;
         
-        private System.Threading.SendOrPostCallback UpdateTaskOperationCompleted;
+        private System.Threading.SendOrPostCallback GetRunningDriveLogsOperationCompleted;
         
-        private System.Threading.SendOrPostCallback DeleteTaskOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback RemoveTaskFromUserOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetRunningDriveLogOperationCompleted;
+        private System.Threading.SendOrPostCallback RemoveUserFromGroupOperationCompleted;
         
         private System.Threading.SendOrPostCallback DeleteUserOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetWorkTimesOperationCompleted;
         
-        private System.Threading.SendOrPostCallback RemoveCarFromUserOperationCompleted;
+        private System.Threading.SendOrPostCallback AssignLeaderToGroupOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AddUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RemoveGroupFromTaskOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetRunningWorkTimesOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetProjectTimesOperationCompleted;
         
         private System.Threading.SendOrPostCallback DeleteWorkItemOperationCompleted;
         
@@ -85,39 +66,99 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private System.Threading.SendOrPostCallback SaveDriveLogOperationCompleted;
         
+        private System.Threading.SendOrPostCallback UpdateGroupIdOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetWorkItemsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetGroupUsersOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AssignGroupToTaskOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SetGroupExternalIdOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SetDriveLogsStatusOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UnlockProjectTimesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UpdateUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetUsersOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetTaskOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetProjectTimesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeleteTaskByUUIDOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AddGroupOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UpdateGroupOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeleteUserByUUIDOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetDriveLogsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetCarsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SetProjectTimesStatusOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetGroupsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SetTaskExternalIdOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeleteWorkItemByUUIDOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SetWorkTimesStatusOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetTaskByUUIDOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AssignUserToGroupOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AddWorkItemOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RemoveCarFromUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AssignTaskToUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetRunningProjectTimesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetGroupLeadersOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UpdateWorkItemIdOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UpdateUserIdOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SaveProjectTimeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UpdateTaskOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeleteTaskOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RemoveTaskFromUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RemoveLeaderFromGroupOperationCompleted;
+        
         private System.Threading.SendOrPostCallback UpdateTaskIdOperationCompleted;
         
         private System.Threading.SendOrPostCallback UpdateWorkItemOperationCompleted;
         
-        private System.Threading.SendOrPostCallback GetUsersOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetWorkItemsOperationCompleted;
-        
         private System.Threading.SendOrPostCallback AssignCarToUserOperationCompleted;
         
-        private System.Threading.SendOrPostCallback GetCarsOperationCompleted;
+        private System.Threading.SendOrPostCallback DeleteGroupOperationCompleted;
         
-        private System.Threading.SendOrPostCallback UpdateUserOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetTaskOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback GetDriveLogsOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback SetProjectTimesStatusOperationCompleted;
+        private System.Threading.SendOrPostCallback InviteUserOperationCompleted;
         
         private System.Threading.SendOrPostCallback LockProjectTimesOperationCompleted;
         
-        private System.Threading.SendOrPostCallback SetTaskExternalIdOperationCompleted;
+        private System.Threading.SendOrPostCallback DeleteCarByUUIDOperationCompleted;
         
-        private System.Threading.SendOrPostCallback SetWorkTimesStatusOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback UnlockProjectTimesOperationCompleted;
+        private System.Threading.SendOrPostCallback GetGroupOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
         public TimrSyncService() {
-            this.Url = "https://timrsync.timr.com/timr/timrsync";
+            this.Url = "https://timrsync.timr.com:443/timr/timrsync";
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
@@ -152,37 +193,13 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
-        public event GetRunningProjectTimesCompletedEventHandler GetRunningProjectTimesCompleted;
-        
-        /// <remarks/>
-        public event AssignTaskToUserCompletedEventHandler AssignTaskToUserCompleted;
-        
-        /// <remarks/>
         public event DeleteCarCompletedEventHandler DeleteCarCompleted;
-        
-        /// <remarks/>
-        public event UpdateWorkItemIdCompletedEventHandler UpdateWorkItemIdCompleted;
         
         /// <remarks/>
         public event UpdateCarCompletedEventHandler UpdateCarCompleted;
         
         /// <remarks/>
-        public event UpdateUserIdCompletedEventHandler UpdateUserIdCompleted;
-        
-        /// <remarks/>
         public event GetTasksCompletedEventHandler GetTasksCompleted;
-        
-        /// <remarks/>
-        public event SaveProjectTimeCompletedEventHandler SaveProjectTimeCompleted;
-        
-        /// <remarks/>
-        public event AddWorkItemCompletedEventHandler AddWorkItemCompleted;
-        
-        /// <remarks/>
-        public event AddUserCompletedEventHandler AddUserCompleted;
-        
-        /// <remarks/>
-        public event SetDriveLogsStatusCompletedEventHandler SetDriveLogsStatusCompleted;
         
         /// <remarks/>
         public event SaveWorkTimeCompletedEventHandler SaveWorkTimeCompleted;
@@ -191,16 +208,10 @@ namespace TimrSyncTest.TimrSyncWebService {
         public event AddCarCompletedEventHandler AddCarCompleted;
         
         /// <remarks/>
-        public event UpdateTaskCompletedEventHandler UpdateTaskCompleted;
+        public event GetRunningDriveLogsCompletedEventHandler GetRunningDriveLogsCompleted;
         
         /// <remarks/>
-        public event DeleteTaskCompletedEventHandler DeleteTaskCompleted;
-        
-        /// <remarks/>
-        public event RemoveTaskFromUserCompletedEventHandler RemoveTaskFromUserCompleted;
-        
-        /// <remarks/>
-        public event GetRunningDriveLogCompletedEventHandler GetRunningDriveLogCompleted;
+        public event RemoveUserFromGroupCompletedEventHandler RemoveUserFromGroupCompleted;
         
         /// <remarks/>
         public event DeleteUserCompletedEventHandler DeleteUserCompleted;
@@ -209,13 +220,16 @@ namespace TimrSyncTest.TimrSyncWebService {
         public event GetWorkTimesCompletedEventHandler GetWorkTimesCompleted;
         
         /// <remarks/>
-        public event RemoveCarFromUserCompletedEventHandler RemoveCarFromUserCompleted;
+        public event AssignLeaderToGroupCompletedEventHandler AssignLeaderToGroupCompleted;
+        
+        /// <remarks/>
+        public event AddUserCompletedEventHandler AddUserCompleted;
+        
+        /// <remarks/>
+        public event RemoveGroupFromTaskCompletedEventHandler RemoveGroupFromTaskCompleted;
         
         /// <remarks/>
         public event GetRunningWorkTimesCompletedEventHandler GetRunningWorkTimesCompleted;
-        
-        /// <remarks/>
-        public event GetProjectTimesCompletedEventHandler GetProjectTimesCompleted;
         
         /// <remarks/>
         public event DeleteWorkItemCompletedEventHandler DeleteWorkItemCompleted;
@@ -230,107 +244,136 @@ namespace TimrSyncTest.TimrSyncWebService {
         public event SaveDriveLogCompletedEventHandler SaveDriveLogCompleted;
         
         /// <remarks/>
+        public event UpdateGroupIdCompletedEventHandler UpdateGroupIdCompleted;
+        
+        /// <remarks/>
+        public event GetWorkItemsCompletedEventHandler GetWorkItemsCompleted;
+        
+        /// <remarks/>
+        public event GetGroupUsersCompletedEventHandler GetGroupUsersCompleted;
+        
+        /// <remarks/>
+        public event AssignGroupToTaskCompletedEventHandler AssignGroupToTaskCompleted;
+        
+        /// <remarks/>
+        public event SetGroupExternalIdCompletedEventHandler SetGroupExternalIdCompleted;
+        
+        /// <remarks/>
+        public event SetDriveLogsStatusCompletedEventHandler SetDriveLogsStatusCompleted;
+        
+        /// <remarks/>
+        public event UnlockProjectTimesCompletedEventHandler UnlockProjectTimesCompleted;
+        
+        /// <remarks/>
+        public event UpdateUserCompletedEventHandler UpdateUserCompleted;
+        
+        /// <remarks/>
+        public event GetUsersCompletedEventHandler GetUsersCompleted;
+        
+        /// <remarks/>
+        public event GetTaskCompletedEventHandler GetTaskCompleted;
+        
+        /// <remarks/>
+        public event GetProjectTimesCompletedEventHandler GetProjectTimesCompleted;
+        
+        /// <remarks/>
+        public event DeleteTaskByUUIDCompletedEventHandler DeleteTaskByUUIDCompleted;
+        
+        /// <remarks/>
+        public event AddGroupCompletedEventHandler AddGroupCompleted;
+        
+        /// <remarks/>
+        public event UpdateGroupCompletedEventHandler UpdateGroupCompleted;
+        
+        /// <remarks/>
+        public event DeleteUserByUUIDCompletedEventHandler DeleteUserByUUIDCompleted;
+        
+        /// <remarks/>
+        public event GetDriveLogsCompletedEventHandler GetDriveLogsCompleted;
+        
+        /// <remarks/>
+        public event GetCarsCompletedEventHandler GetCarsCompleted;
+        
+        /// <remarks/>
+        public event SetProjectTimesStatusCompletedEventHandler SetProjectTimesStatusCompleted;
+        
+        /// <remarks/>
+        public event GetGroupsCompletedEventHandler GetGroupsCompleted;
+        
+        /// <remarks/>
+        public event SetTaskExternalIdCompletedEventHandler SetTaskExternalIdCompleted;
+        
+        /// <remarks/>
+        public event DeleteWorkItemByUUIDCompletedEventHandler DeleteWorkItemByUUIDCompleted;
+        
+        /// <remarks/>
+        public event SetWorkTimesStatusCompletedEventHandler SetWorkTimesStatusCompleted;
+        
+        /// <remarks/>
+        public event GetTaskByUUIDCompletedEventHandler GetTaskByUUIDCompleted;
+        
+        /// <remarks/>
+        public event AssignUserToGroupCompletedEventHandler AssignUserToGroupCompleted;
+        
+        /// <remarks/>
+        public event AddWorkItemCompletedEventHandler AddWorkItemCompleted;
+        
+        /// <remarks/>
+        public event RemoveCarFromUserCompletedEventHandler RemoveCarFromUserCompleted;
+        
+        /// <remarks/>
+        public event AssignTaskToUserCompletedEventHandler AssignTaskToUserCompleted;
+        
+        /// <remarks/>
+        public event GetRunningProjectTimesCompletedEventHandler GetRunningProjectTimesCompleted;
+        
+        /// <remarks/>
+        public event GetGroupLeadersCompletedEventHandler GetGroupLeadersCompleted;
+        
+        /// <remarks/>
+        public event UpdateWorkItemIdCompletedEventHandler UpdateWorkItemIdCompleted;
+        
+        /// <remarks/>
+        public event UpdateUserIdCompletedEventHandler UpdateUserIdCompleted;
+        
+        /// <remarks/>
+        public event SaveProjectTimeCompletedEventHandler SaveProjectTimeCompleted;
+        
+        /// <remarks/>
+        public event UpdateTaskCompletedEventHandler UpdateTaskCompleted;
+        
+        /// <remarks/>
+        public event DeleteTaskCompletedEventHandler DeleteTaskCompleted;
+        
+        /// <remarks/>
+        public event RemoveTaskFromUserCompletedEventHandler RemoveTaskFromUserCompleted;
+        
+        /// <remarks/>
+        public event RemoveLeaderFromGroupCompletedEventHandler RemoveLeaderFromGroupCompleted;
+        
+        /// <remarks/>
         public event UpdateTaskIdCompletedEventHandler UpdateTaskIdCompleted;
         
         /// <remarks/>
         public event UpdateWorkItemCompletedEventHandler UpdateWorkItemCompleted;
         
         /// <remarks/>
-        public event GetUsersCompletedEventHandler GetUsersCompleted;
-        
-        /// <remarks/>
-        public event GetWorkItemsCompletedEventHandler GetWorkItemsCompleted;
-        
-        /// <remarks/>
         public event AssignCarToUserCompletedEventHandler AssignCarToUserCompleted;
         
         /// <remarks/>
-        public event GetCarsCompletedEventHandler GetCarsCompleted;
+        public event DeleteGroupCompletedEventHandler DeleteGroupCompleted;
         
         /// <remarks/>
-        public event UpdateUserCompletedEventHandler UpdateUserCompleted;
-        
-        /// <remarks/>
-        public event GetTaskCompletedEventHandler GetTaskCompleted;
-        
-        /// <remarks/>
-        public event GetDriveLogsCompletedEventHandler GetDriveLogsCompleted;
-        
-        /// <remarks/>
-        public event SetProjectTimesStatusCompletedEventHandler SetProjectTimesStatusCompleted;
+        public event InviteUserCompletedEventHandler InviteUserCompleted;
         
         /// <remarks/>
         public event LockProjectTimesCompletedEventHandler LockProjectTimesCompleted;
         
         /// <remarks/>
-        public event SetTaskExternalIdCompletedEventHandler SetTaskExternalIdCompleted;
+        public event DeleteCarByUUIDCompletedEventHandler DeleteCarByUUIDCompleted;
         
         /// <remarks/>
-        public event SetWorkTimesStatusCompletedEventHandler SetWorkTimesStatusCompleted;
-        
-        /// <remarks/>
-        public event UnlockProjectTimesCompletedEventHandler UnlockProjectTimesCompleted;
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlArrayAttribute("GetRunningProjectTimesResponse", Namespace="http://timr.com/timrsync")]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute("runningProjectTimes", IsNullable=false)]
-        public RunningProjectTime[] GetRunningProjectTimes([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetRunningProjectTimesRequest) {
-            object[] results = this.Invoke("GetRunningProjectTimes", new object[] {
-                        GetRunningProjectTimesRequest});
-            return ((RunningProjectTime[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetRunningProjectTimesAsync(object GetRunningProjectTimesRequest) {
-            this.GetRunningProjectTimesAsync(GetRunningProjectTimesRequest, null);
-        }
-        
-        /// <remarks/>
-        public void GetRunningProjectTimesAsync(object GetRunningProjectTimesRequest, object userState) {
-            if ((this.GetRunningProjectTimesOperationCompleted == null)) {
-                this.GetRunningProjectTimesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetRunningProjectTimesOperationCompleted);
-            }
-            this.InvokeAsync("GetRunningProjectTimes", new object[] {
-                        GetRunningProjectTimesRequest}, this.GetRunningProjectTimesOperationCompleted, userState);
-        }
-        
-        private void OnGetRunningProjectTimesOperationCompleted(object arg) {
-            if ((this.GetRunningProjectTimesCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetRunningProjectTimesCompleted(this, new GetRunningProjectTimesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("AssignTaskToUserResponse", Namespace="http://timr.com/timrsync")]
-        public bool AssignTaskToUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] AssignTaskToUserRequest AssignTaskToUserRequest) {
-            object[] results = this.Invoke("AssignTaskToUser", new object[] {
-                        AssignTaskToUserRequest});
-            return ((bool)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void AssignTaskToUserAsync(AssignTaskToUserRequest AssignTaskToUserRequest) {
-            this.AssignTaskToUserAsync(AssignTaskToUserRequest, null);
-        }
-        
-        /// <remarks/>
-        public void AssignTaskToUserAsync(AssignTaskToUserRequest AssignTaskToUserRequest, object userState) {
-            if ((this.AssignTaskToUserOperationCompleted == null)) {
-                this.AssignTaskToUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAssignTaskToUserOperationCompleted);
-            }
-            this.InvokeAsync("AssignTaskToUser", new object[] {
-                        AssignTaskToUserRequest}, this.AssignTaskToUserOperationCompleted, userState);
-        }
-        
-        private void OnAssignTaskToUserOperationCompleted(object arg) {
-            if ((this.AssignTaskToUserCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AssignTaskToUserCompleted(this, new AssignTaskToUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
+        public event GetGroupCompletedEventHandler GetGroupCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
@@ -359,36 +402,6 @@ namespace TimrSyncTest.TimrSyncWebService {
             if ((this.DeleteCarCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.DeleteCarCompleted(this, new DeleteCarCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("UpdateWorkItemIdResponse", Namespace="http://timr.com/timrsync")]
-        public bool UpdateWorkItemId([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] UpdateWorkItemIdRequest UpdateWorkItemIdRequest) {
-            object[] results = this.Invoke("UpdateWorkItemId", new object[] {
-                        UpdateWorkItemIdRequest});
-            return ((bool)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void UpdateWorkItemIdAsync(UpdateWorkItemIdRequest UpdateWorkItemIdRequest) {
-            this.UpdateWorkItemIdAsync(UpdateWorkItemIdRequest, null);
-        }
-        
-        /// <remarks/>
-        public void UpdateWorkItemIdAsync(UpdateWorkItemIdRequest UpdateWorkItemIdRequest, object userState) {
-            if ((this.UpdateWorkItemIdOperationCompleted == null)) {
-                this.UpdateWorkItemIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateWorkItemIdOperationCompleted);
-            }
-            this.InvokeAsync("UpdateWorkItemId", new object[] {
-                        UpdateWorkItemIdRequest}, this.UpdateWorkItemIdOperationCompleted, userState);
-        }
-        
-        private void OnUpdateWorkItemIdOperationCompleted(object arg) {
-            if ((this.UpdateWorkItemIdCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.UpdateWorkItemIdCompleted(this, new UpdateWorkItemIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -424,51 +437,21 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("UpdateUserIdResponse", Namespace="http://timr.com/timrsync")]
-        public bool UpdateUserId([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] UpdateUserIdRequest UpdateUserIdRequest) {
-            object[] results = this.Invoke("UpdateUserId", new object[] {
-                        UpdateUserIdRequest});
-            return ((bool)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void UpdateUserIdAsync(UpdateUserIdRequest UpdateUserIdRequest) {
-            this.UpdateUserIdAsync(UpdateUserIdRequest, null);
-        }
-        
-        /// <remarks/>
-        public void UpdateUserIdAsync(UpdateUserIdRequest UpdateUserIdRequest, object userState) {
-            if ((this.UpdateUserIdOperationCompleted == null)) {
-                this.UpdateUserIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateUserIdOperationCompleted);
-            }
-            this.InvokeAsync("UpdateUserId", new object[] {
-                        UpdateUserIdRequest}, this.UpdateUserIdOperationCompleted, userState);
-        }
-        
-        private void OnUpdateUserIdOperationCompleted(object arg) {
-            if ((this.UpdateUserIdCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.UpdateUserIdCompleted(this, new UpdateUserIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
         [return: System.Xml.Serialization.XmlArrayAttribute("GetTasksResponse", Namespace="http://timr.com/timrsync")]
         [return: System.Xml.Serialization.XmlArrayItemAttribute("tasks", IsNullable=false)]
-        public Task[] GetTasks([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetTasksRequest) {
+        public Task[] GetTasks([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] GetTasksRequest GetTasksRequest) {
             object[] results = this.Invoke("GetTasks", new object[] {
                         GetTasksRequest});
             return ((Task[])(results[0]));
         }
         
         /// <remarks/>
-        public void GetTasksAsync(object GetTasksRequest) {
+        public void GetTasksAsync(GetTasksRequest GetTasksRequest) {
             this.GetTasksAsync(GetTasksRequest, null);
         }
         
         /// <remarks/>
-        public void GetTasksAsync(object GetTasksRequest, object userState) {
+        public void GetTasksAsync(GetTasksRequest GetTasksRequest, object userState) {
             if ((this.GetTasksOperationCompleted == null)) {
                 this.GetTasksOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetTasksOperationCompleted);
             }
@@ -480,124 +463,6 @@ namespace TimrSyncTest.TimrSyncWebService {
             if ((this.GetTasksCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetTasksCompleted(this, new GetTasksCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("SaveProjectTimeResponse", Namespace="http://timr.com/timrsync")]
-        public long SaveProjectTime([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] ProjectTime SaveProjectTimeRequest) {
-            object[] results = this.Invoke("SaveProjectTime", new object[] {
-                        SaveProjectTimeRequest});
-            return ((long)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void SaveProjectTimeAsync(ProjectTime SaveProjectTimeRequest) {
-            this.SaveProjectTimeAsync(SaveProjectTimeRequest, null);
-        }
-        
-        /// <remarks/>
-        public void SaveProjectTimeAsync(ProjectTime SaveProjectTimeRequest, object userState) {
-            if ((this.SaveProjectTimeOperationCompleted == null)) {
-                this.SaveProjectTimeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSaveProjectTimeOperationCompleted);
-            }
-            this.InvokeAsync("SaveProjectTime", new object[] {
-                        SaveProjectTimeRequest}, this.SaveProjectTimeOperationCompleted, userState);
-        }
-        
-        private void OnSaveProjectTimeOperationCompleted(object arg) {
-            if ((this.SaveProjectTimeCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.SaveProjectTimeCompleted(this, new SaveProjectTimeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("AddWorkItemResponse", Namespace="http://timr.com/timrsync")]
-        public long AddWorkItem([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] WorkItem AddWorkItemRequest) {
-            object[] results = this.Invoke("AddWorkItem", new object[] {
-                        AddWorkItemRequest});
-            return ((long)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void AddWorkItemAsync(WorkItem AddWorkItemRequest) {
-            this.AddWorkItemAsync(AddWorkItemRequest, null);
-        }
-        
-        /// <remarks/>
-        public void AddWorkItemAsync(WorkItem AddWorkItemRequest, object userState) {
-            if ((this.AddWorkItemOperationCompleted == null)) {
-                this.AddWorkItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddWorkItemOperationCompleted);
-            }
-            this.InvokeAsync("AddWorkItem", new object[] {
-                        AddWorkItemRequest}, this.AddWorkItemOperationCompleted, userState);
-        }
-        
-        private void OnAddWorkItemOperationCompleted(object arg) {
-            if ((this.AddWorkItemCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AddWorkItemCompleted(this, new AddWorkItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("AddUserResponse", Namespace="http://timr.com/timrsync")]
-        public long AddUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] User AddUserRequest) {
-            object[] results = this.Invoke("AddUser", new object[] {
-                        AddUserRequest});
-            return ((long)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void AddUserAsync(User AddUserRequest) {
-            this.AddUserAsync(AddUserRequest, null);
-        }
-        
-        /// <remarks/>
-        public void AddUserAsync(User AddUserRequest, object userState) {
-            if ((this.AddUserOperationCompleted == null)) {
-                this.AddUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddUserOperationCompleted);
-            }
-            this.InvokeAsync("AddUser", new object[] {
-                        AddUserRequest}, this.AddUserOperationCompleted, userState);
-        }
-        
-        private void OnAddUserOperationCompleted(object arg) {
-            if ((this.AddUserCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.AddUserCompleted(this, new AddUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", OneWay=true, Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        public void SetDriveLogsStatus([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] DriveLogsStatusRequestType SetDriveLogsStatusRequest) {
-            this.Invoke("SetDriveLogsStatus", new object[] {
-                        SetDriveLogsStatusRequest});
-        }
-        
-        /// <remarks/>
-        public void SetDriveLogsStatusAsync(DriveLogsStatusRequestType SetDriveLogsStatusRequest) {
-            this.SetDriveLogsStatusAsync(SetDriveLogsStatusRequest, null);
-        }
-        
-        /// <remarks/>
-        public void SetDriveLogsStatusAsync(DriveLogsStatusRequestType SetDriveLogsStatusRequest, object userState) {
-            if ((this.SetDriveLogsStatusOperationCompleted == null)) {
-                this.SetDriveLogsStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetDriveLogsStatusOperationCompleted);
-            }
-            this.InvokeAsync("SetDriveLogsStatus", new object[] {
-                        SetDriveLogsStatusRequest}, this.SetDriveLogsStatusOperationCompleted, userState);
-        }
-        
-        private void OnSetDriveLogsStatusOperationCompleted(object arg) {
-            if ((this.SetDriveLogsStatusCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.SetDriveLogsStatusCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -663,119 +528,62 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("UpdateTaskResponse", Namespace="http://timr.com/timrsync")]
-        public bool UpdateTask([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] Task UpdateTaskRequest) {
-            object[] results = this.Invoke("UpdateTask", new object[] {
-                        UpdateTaskRequest});
-            return ((bool)(results[0]));
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetRunningDriveLogsResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("runningDriveLogs", IsNullable=false)]
+        public RunningDriveLog[] GetRunningDriveLogs([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetRunningDriveLogsRequest) {
+            object[] results = this.Invoke("GetRunningDriveLogs", new object[] {
+                        GetRunningDriveLogsRequest});
+            return ((RunningDriveLog[])(results[0]));
         }
         
         /// <remarks/>
-        public void UpdateTaskAsync(Task UpdateTaskRequest) {
-            this.UpdateTaskAsync(UpdateTaskRequest, null);
+        public void GetRunningDriveLogsAsync(object GetRunningDriveLogsRequest) {
+            this.GetRunningDriveLogsAsync(GetRunningDriveLogsRequest, null);
         }
         
         /// <remarks/>
-        public void UpdateTaskAsync(Task UpdateTaskRequest, object userState) {
-            if ((this.UpdateTaskOperationCompleted == null)) {
-                this.UpdateTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateTaskOperationCompleted);
+        public void GetRunningDriveLogsAsync(object GetRunningDriveLogsRequest, object userState) {
+            if ((this.GetRunningDriveLogsOperationCompleted == null)) {
+                this.GetRunningDriveLogsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetRunningDriveLogsOperationCompleted);
             }
-            this.InvokeAsync("UpdateTask", new object[] {
-                        UpdateTaskRequest}, this.UpdateTaskOperationCompleted, userState);
+            this.InvokeAsync("GetRunningDriveLogs", new object[] {
+                        GetRunningDriveLogsRequest}, this.GetRunningDriveLogsOperationCompleted, userState);
         }
         
-        private void OnUpdateTaskOperationCompleted(object arg) {
-            if ((this.UpdateTaskCompleted != null)) {
+        private void OnGetRunningDriveLogsOperationCompleted(object arg) {
+            if ((this.GetRunningDriveLogsCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.UpdateTaskCompleted(this, new UpdateTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.GetRunningDriveLogsCompleted(this, new GetRunningDriveLogsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("DeleteTaskResponse", Namespace="http://timr.com/timrsync")]
-        public bool DeleteTask([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string DeleteTaskRequest) {
-            object[] results = this.Invoke("DeleteTask", new object[] {
-                        DeleteTaskRequest});
+        [return: System.Xml.Serialization.XmlElementAttribute("RemoveUserFromGroupResponse", Namespace="http://timr.com/timrsync")]
+        public bool RemoveUserFromGroup([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] RemoveUserFromGroupRequest RemoveUserFromGroupRequest) {
+            object[] results = this.Invoke("RemoveUserFromGroup", new object[] {
+                        RemoveUserFromGroupRequest});
             return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void DeleteTaskAsync(string DeleteTaskRequest) {
-            this.DeleteTaskAsync(DeleteTaskRequest, null);
+        public void RemoveUserFromGroupAsync(RemoveUserFromGroupRequest RemoveUserFromGroupRequest) {
+            this.RemoveUserFromGroupAsync(RemoveUserFromGroupRequest, null);
         }
         
         /// <remarks/>
-        public void DeleteTaskAsync(string DeleteTaskRequest, object userState) {
-            if ((this.DeleteTaskOperationCompleted == null)) {
-                this.DeleteTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteTaskOperationCompleted);
+        public void RemoveUserFromGroupAsync(RemoveUserFromGroupRequest RemoveUserFromGroupRequest, object userState) {
+            if ((this.RemoveUserFromGroupOperationCompleted == null)) {
+                this.RemoveUserFromGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRemoveUserFromGroupOperationCompleted);
             }
-            this.InvokeAsync("DeleteTask", new object[] {
-                        DeleteTaskRequest}, this.DeleteTaskOperationCompleted, userState);
+            this.InvokeAsync("RemoveUserFromGroup", new object[] {
+                        RemoveUserFromGroupRequest}, this.RemoveUserFromGroupOperationCompleted, userState);
         }
         
-        private void OnDeleteTaskOperationCompleted(object arg) {
-            if ((this.DeleteTaskCompleted != null)) {
+        private void OnRemoveUserFromGroupOperationCompleted(object arg) {
+            if ((this.RemoveUserFromGroupCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.DeleteTaskCompleted(this, new DeleteTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("RemoveTaskFromUserResponse", Namespace="http://timr.com/timrsync")]
-        public bool RemoveTaskFromUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] RemoveTaskFromUserRequest RemoveTaskFromUserRequest) {
-            object[] results = this.Invoke("RemoveTaskFromUser", new object[] {
-                        RemoveTaskFromUserRequest});
-            return ((bool)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void RemoveTaskFromUserAsync(RemoveTaskFromUserRequest RemoveTaskFromUserRequest) {
-            this.RemoveTaskFromUserAsync(RemoveTaskFromUserRequest, null);
-        }
-        
-        /// <remarks/>
-        public void RemoveTaskFromUserAsync(RemoveTaskFromUserRequest RemoveTaskFromUserRequest, object userState) {
-            if ((this.RemoveTaskFromUserOperationCompleted == null)) {
-                this.RemoveTaskFromUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRemoveTaskFromUserOperationCompleted);
-            }
-            this.InvokeAsync("RemoveTaskFromUser", new object[] {
-                        RemoveTaskFromUserRequest}, this.RemoveTaskFromUserOperationCompleted, userState);
-        }
-        
-        private void OnRemoveTaskFromUserOperationCompleted(object arg) {
-            if ((this.RemoveTaskFromUserCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.RemoveTaskFromUserCompleted(this, new RemoveTaskFromUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", OneWay=true, Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        public void GetRunningDriveLog([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetRunningDriveLogRequest) {
-            this.Invoke("GetRunningDriveLog", new object[] {
-                        GetRunningDriveLogRequest});
-        }
-        
-        /// <remarks/>
-        public void GetRunningDriveLogAsync(object GetRunningDriveLogRequest) {
-            this.GetRunningDriveLogAsync(GetRunningDriveLogRequest, null);
-        }
-        
-        /// <remarks/>
-        public void GetRunningDriveLogAsync(object GetRunningDriveLogRequest, object userState) {
-            if ((this.GetRunningDriveLogOperationCompleted == null)) {
-                this.GetRunningDriveLogOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetRunningDriveLogOperationCompleted);
-            }
-            this.InvokeAsync("GetRunningDriveLog", new object[] {
-                        GetRunningDriveLogRequest}, this.GetRunningDriveLogOperationCompleted, userState);
-        }
-        
-        private void OnGetRunningDriveLogOperationCompleted(object arg) {
-            if ((this.GetRunningDriveLogCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetRunningDriveLogCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.RemoveUserFromGroupCompleted(this, new RemoveUserFromGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -842,31 +650,91 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("RemoveCarFromUserResponse", Namespace="http://timr.com/timrsync")]
-        public bool RemoveCarFromUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] RemoveCarFromUserRequest RemoveCarFromUserRequest) {
-            object[] results = this.Invoke("RemoveCarFromUser", new object[] {
-                        RemoveCarFromUserRequest});
+        [return: System.Xml.Serialization.XmlElementAttribute("AssignLeaderToGroupResponse", Namespace="http://timr.com/timrsync")]
+        public bool AssignLeaderToGroup([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] AssignLeaderToGroupRequest AssignLeaderToGroupRequest) {
+            object[] results = this.Invoke("AssignLeaderToGroup", new object[] {
+                        AssignLeaderToGroupRequest});
             return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void RemoveCarFromUserAsync(RemoveCarFromUserRequest RemoveCarFromUserRequest) {
-            this.RemoveCarFromUserAsync(RemoveCarFromUserRequest, null);
+        public void AssignLeaderToGroupAsync(AssignLeaderToGroupRequest AssignLeaderToGroupRequest) {
+            this.AssignLeaderToGroupAsync(AssignLeaderToGroupRequest, null);
         }
         
         /// <remarks/>
-        public void RemoveCarFromUserAsync(RemoveCarFromUserRequest RemoveCarFromUserRequest, object userState) {
-            if ((this.RemoveCarFromUserOperationCompleted == null)) {
-                this.RemoveCarFromUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRemoveCarFromUserOperationCompleted);
+        public void AssignLeaderToGroupAsync(AssignLeaderToGroupRequest AssignLeaderToGroupRequest, object userState) {
+            if ((this.AssignLeaderToGroupOperationCompleted == null)) {
+                this.AssignLeaderToGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAssignLeaderToGroupOperationCompleted);
             }
-            this.InvokeAsync("RemoveCarFromUser", new object[] {
-                        RemoveCarFromUserRequest}, this.RemoveCarFromUserOperationCompleted, userState);
+            this.InvokeAsync("AssignLeaderToGroup", new object[] {
+                        AssignLeaderToGroupRequest}, this.AssignLeaderToGroupOperationCompleted, userState);
         }
         
-        private void OnRemoveCarFromUserOperationCompleted(object arg) {
-            if ((this.RemoveCarFromUserCompleted != null)) {
+        private void OnAssignLeaderToGroupOperationCompleted(object arg) {
+            if ((this.AssignLeaderToGroupCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.RemoveCarFromUserCompleted(this, new RemoveCarFromUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.AssignLeaderToGroupCompleted(this, new AssignLeaderToGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("AddUserResponse", Namespace="http://timr.com/timrsync")]
+        public long AddUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] User AddUserRequest) {
+            object[] results = this.Invoke("AddUser", new object[] {
+                        AddUserRequest});
+            return ((long)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AddUserAsync(User AddUserRequest) {
+            this.AddUserAsync(AddUserRequest, null);
+        }
+        
+        /// <remarks/>
+        public void AddUserAsync(User AddUserRequest, object userState) {
+            if ((this.AddUserOperationCompleted == null)) {
+                this.AddUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddUserOperationCompleted);
+            }
+            this.InvokeAsync("AddUser", new object[] {
+                        AddUserRequest}, this.AddUserOperationCompleted, userState);
+        }
+        
+        private void OnAddUserOperationCompleted(object arg) {
+            if ((this.AddUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddUserCompleted(this, new AddUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("RemoveGroupFromTaskResponse", Namespace="http://timr.com/timrsync")]
+        public bool RemoveGroupFromTask([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] RemoveGroupFromTaskRequest RemoveGroupFromTaskRequest) {
+            object[] results = this.Invoke("RemoveGroupFromTask", new object[] {
+                        RemoveGroupFromTaskRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RemoveGroupFromTaskAsync(RemoveGroupFromTaskRequest RemoveGroupFromTaskRequest) {
+            this.RemoveGroupFromTaskAsync(RemoveGroupFromTaskRequest, null);
+        }
+        
+        /// <remarks/>
+        public void RemoveGroupFromTaskAsync(RemoveGroupFromTaskRequest RemoveGroupFromTaskRequest, object userState) {
+            if ((this.RemoveGroupFromTaskOperationCompleted == null)) {
+                this.RemoveGroupFromTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRemoveGroupFromTaskOperationCompleted);
+            }
+            this.InvokeAsync("RemoveGroupFromTask", new object[] {
+                        RemoveGroupFromTaskRequest}, this.RemoveGroupFromTaskOperationCompleted, userState);
+        }
+        
+        private void OnRemoveGroupFromTaskOperationCompleted(object arg) {
+            if ((this.RemoveGroupFromTaskCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RemoveGroupFromTaskCompleted(this, new RemoveGroupFromTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -898,37 +766,6 @@ namespace TimrSyncTest.TimrSyncWebService {
             if ((this.GetRunningWorkTimesCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetRunningWorkTimesCompleted(this, new GetRunningWorkTimesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlArrayAttribute("GetProjectTimesResponse", Namespace="http://timr.com/timrsync")]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute("projectTimes", IsNullable=false)]
-        public ProjectTime[] GetProjectTimes([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] ProjectTimeQuery GetProjectTimesRequest) {
-            object[] results = this.Invoke("GetProjectTimes", new object[] {
-                        GetProjectTimesRequest});
-            return ((ProjectTime[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetProjectTimesAsync(ProjectTimeQuery GetProjectTimesRequest) {
-            this.GetProjectTimesAsync(GetProjectTimesRequest, null);
-        }
-        
-        /// <remarks/>
-        public void GetProjectTimesAsync(ProjectTimeQuery GetProjectTimesRequest, object userState) {
-            if ((this.GetProjectTimesOperationCompleted == null)) {
-                this.GetProjectTimesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetProjectTimesOperationCompleted);
-            }
-            this.InvokeAsync("GetProjectTimes", new object[] {
-                        GetProjectTimesRequest}, this.GetProjectTimesOperationCompleted, userState);
-        }
-        
-        private void OnGetProjectTimesOperationCompleted(object arg) {
-            if ((this.GetProjectTimesCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetProjectTimesCompleted(this, new GetProjectTimesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1054,6 +891,1095 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("UpdateGroupIdResponse", Namespace="http://timr.com/timrsync")]
+        public bool UpdateGroupId([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] UpdateGroupIdRequest UpdateGroupIdRequest) {
+            object[] results = this.Invoke("UpdateGroupId", new object[] {
+                        UpdateGroupIdRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateGroupIdAsync(UpdateGroupIdRequest UpdateGroupIdRequest) {
+            this.UpdateGroupIdAsync(UpdateGroupIdRequest, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateGroupIdAsync(UpdateGroupIdRequest UpdateGroupIdRequest, object userState) {
+            if ((this.UpdateGroupIdOperationCompleted == null)) {
+                this.UpdateGroupIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateGroupIdOperationCompleted);
+            }
+            this.InvokeAsync("UpdateGroupId", new object[] {
+                        UpdateGroupIdRequest}, this.UpdateGroupIdOperationCompleted, userState);
+        }
+        
+        private void OnUpdateGroupIdOperationCompleted(object arg) {
+            if ((this.UpdateGroupIdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateGroupIdCompleted(this, new UpdateGroupIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetWorkItemsResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("workItem", IsNullable=false)]
+        public WorkItem[] GetWorkItems([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetWorkItemsRequest) {
+            object[] results = this.Invoke("GetWorkItems", new object[] {
+                        GetWorkItemsRequest});
+            return ((WorkItem[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetWorkItemsAsync(object GetWorkItemsRequest) {
+            this.GetWorkItemsAsync(GetWorkItemsRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetWorkItemsAsync(object GetWorkItemsRequest, object userState) {
+            if ((this.GetWorkItemsOperationCompleted == null)) {
+                this.GetWorkItemsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetWorkItemsOperationCompleted);
+            }
+            this.InvokeAsync("GetWorkItems", new object[] {
+                        GetWorkItemsRequest}, this.GetWorkItemsOperationCompleted, userState);
+        }
+        
+        private void OnGetWorkItemsOperationCompleted(object arg) {
+            if ((this.GetWorkItemsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetWorkItemsCompleted(this, new GetWorkItemsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetGroupUsersResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("users", IsNullable=false)]
+        public User[] GetGroupUsers([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string GetGroupUsersRequest) {
+            object[] results = this.Invoke("GetGroupUsers", new object[] {
+                        GetGroupUsersRequest});
+            return ((User[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetGroupUsersAsync(string GetGroupUsersRequest) {
+            this.GetGroupUsersAsync(GetGroupUsersRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetGroupUsersAsync(string GetGroupUsersRequest, object userState) {
+            if ((this.GetGroupUsersOperationCompleted == null)) {
+                this.GetGroupUsersOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetGroupUsersOperationCompleted);
+            }
+            this.InvokeAsync("GetGroupUsers", new object[] {
+                        GetGroupUsersRequest}, this.GetGroupUsersOperationCompleted, userState);
+        }
+        
+        private void OnGetGroupUsersOperationCompleted(object arg) {
+            if ((this.GetGroupUsersCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetGroupUsersCompleted(this, new GetGroupUsersCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("AssignGroupToTaskResponse", Namespace="http://timr.com/timrsync")]
+        public bool AssignGroupToTask([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] AssignGroupToTaskRequest AssignGroupToTaskRequest) {
+            object[] results = this.Invoke("AssignGroupToTask", new object[] {
+                        AssignGroupToTaskRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AssignGroupToTaskAsync(AssignGroupToTaskRequest AssignGroupToTaskRequest) {
+            this.AssignGroupToTaskAsync(AssignGroupToTaskRequest, null);
+        }
+        
+        /// <remarks/>
+        public void AssignGroupToTaskAsync(AssignGroupToTaskRequest AssignGroupToTaskRequest, object userState) {
+            if ((this.AssignGroupToTaskOperationCompleted == null)) {
+                this.AssignGroupToTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAssignGroupToTaskOperationCompleted);
+            }
+            this.InvokeAsync("AssignGroupToTask", new object[] {
+                        AssignGroupToTaskRequest}, this.AssignGroupToTaskOperationCompleted, userState);
+        }
+        
+        private void OnAssignGroupToTaskOperationCompleted(object arg) {
+            if ((this.AssignGroupToTaskCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AssignGroupToTaskCompleted(this, new AssignGroupToTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("SetGroupExternalIdResponse", Namespace="http://timr.com/timrsync")]
+        public bool SetGroupExternalId([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] SetGroupExternalIdRequest SetGroupExternalIdRequest) {
+            object[] results = this.Invoke("SetGroupExternalId", new object[] {
+                        SetGroupExternalIdRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SetGroupExternalIdAsync(SetGroupExternalIdRequest SetGroupExternalIdRequest) {
+            this.SetGroupExternalIdAsync(SetGroupExternalIdRequest, null);
+        }
+        
+        /// <remarks/>
+        public void SetGroupExternalIdAsync(SetGroupExternalIdRequest SetGroupExternalIdRequest, object userState) {
+            if ((this.SetGroupExternalIdOperationCompleted == null)) {
+                this.SetGroupExternalIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetGroupExternalIdOperationCompleted);
+            }
+            this.InvokeAsync("SetGroupExternalId", new object[] {
+                        SetGroupExternalIdRequest}, this.SetGroupExternalIdOperationCompleted, userState);
+        }
+        
+        private void OnSetGroupExternalIdOperationCompleted(object arg) {
+            if ((this.SetGroupExternalIdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SetGroupExternalIdCompleted(this, new SetGroupExternalIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("SetDriveLogsStatusResponse", Namespace="http://timr.com/timrsync")]
+        public bool SetDriveLogsStatus([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] DriveLogsStatusRequestType SetDriveLogsStatusRequest) {
+            object[] results = this.Invoke("SetDriveLogsStatus", new object[] {
+                        SetDriveLogsStatusRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SetDriveLogsStatusAsync(DriveLogsStatusRequestType SetDriveLogsStatusRequest) {
+            this.SetDriveLogsStatusAsync(SetDriveLogsStatusRequest, null);
+        }
+        
+        /// <remarks/>
+        public void SetDriveLogsStatusAsync(DriveLogsStatusRequestType SetDriveLogsStatusRequest, object userState) {
+            if ((this.SetDriveLogsStatusOperationCompleted == null)) {
+                this.SetDriveLogsStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetDriveLogsStatusOperationCompleted);
+            }
+            this.InvokeAsync("SetDriveLogsStatus", new object[] {
+                        SetDriveLogsStatusRequest}, this.SetDriveLogsStatusOperationCompleted, userState);
+        }
+        
+        private void OnSetDriveLogsStatusOperationCompleted(object arg) {
+            if ((this.SetDriveLogsStatusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SetDriveLogsStatusCompleted(this, new SetDriveLogsStatusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("UnlockProjectTimesResponse", Namespace="http://timr.com/timrsync")]
+        public bool UnlockProjectTimes([System.Xml.Serialization.XmlArrayAttribute(Namespace="http://timr.com/timrsync")] [System.Xml.Serialization.XmlArrayItemAttribute("ids", IsNullable=false)] long[] UnlockProjectTimesRequest) {
+            object[] results = this.Invoke("UnlockProjectTimes", new object[] {
+                        UnlockProjectTimesRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UnlockProjectTimesAsync(long[] UnlockProjectTimesRequest) {
+            this.UnlockProjectTimesAsync(UnlockProjectTimesRequest, null);
+        }
+        
+        /// <remarks/>
+        public void UnlockProjectTimesAsync(long[] UnlockProjectTimesRequest, object userState) {
+            if ((this.UnlockProjectTimesOperationCompleted == null)) {
+                this.UnlockProjectTimesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUnlockProjectTimesOperationCompleted);
+            }
+            this.InvokeAsync("UnlockProjectTimes", new object[] {
+                        UnlockProjectTimesRequest}, this.UnlockProjectTimesOperationCompleted, userState);
+        }
+        
+        private void OnUnlockProjectTimesOperationCompleted(object arg) {
+            if ((this.UnlockProjectTimesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UnlockProjectTimesCompleted(this, new UnlockProjectTimesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("UpdateUserResponse", Namespace="http://timr.com/timrsync")]
+        public bool UpdateUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] User UpdateUserRequest) {
+            object[] results = this.Invoke("UpdateUser", new object[] {
+                        UpdateUserRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateUserAsync(User UpdateUserRequest) {
+            this.UpdateUserAsync(UpdateUserRequest, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateUserAsync(User UpdateUserRequest, object userState) {
+            if ((this.UpdateUserOperationCompleted == null)) {
+                this.UpdateUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateUserOperationCompleted);
+            }
+            this.InvokeAsync("UpdateUser", new object[] {
+                        UpdateUserRequest}, this.UpdateUserOperationCompleted, userState);
+        }
+        
+        private void OnUpdateUserOperationCompleted(object arg) {
+            if ((this.UpdateUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateUserCompleted(this, new UpdateUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetUsersResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("users", IsNullable=false)]
+        public User[] GetUsers([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetUsersRequest) {
+            object[] results = this.Invoke("GetUsers", new object[] {
+                        GetUsersRequest});
+            return ((User[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetUsersAsync(object GetUsersRequest) {
+            this.GetUsersAsync(GetUsersRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetUsersAsync(object GetUsersRequest, object userState) {
+            if ((this.GetUsersOperationCompleted == null)) {
+                this.GetUsersOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetUsersOperationCompleted);
+            }
+            this.InvokeAsync("GetUsers", new object[] {
+                        GetUsersRequest}, this.GetUsersOperationCompleted, userState);
+        }
+        
+        private void OnGetUsersOperationCompleted(object arg) {
+            if ((this.GetUsersCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetUsersCompleted(this, new GetUsersCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("GetTaskResponse", Namespace="http://timr.com/timrsync")]
+        public Task GetTask([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string GetTaskRequest) {
+            object[] results = this.Invoke("GetTask", new object[] {
+                        GetTaskRequest});
+            return ((Task)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetTaskAsync(string GetTaskRequest) {
+            this.GetTaskAsync(GetTaskRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetTaskAsync(string GetTaskRequest, object userState) {
+            if ((this.GetTaskOperationCompleted == null)) {
+                this.GetTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetTaskOperationCompleted);
+            }
+            this.InvokeAsync("GetTask", new object[] {
+                        GetTaskRequest}, this.GetTaskOperationCompleted, userState);
+        }
+        
+        private void OnGetTaskOperationCompleted(object arg) {
+            if ((this.GetTaskCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetTaskCompleted(this, new GetTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetProjectTimesResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("projectTimes", IsNullable=false)]
+        public ProjectTime[] GetProjectTimes([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] ProjectTimeQuery GetProjectTimesRequest) {
+            object[] results = this.Invoke("GetProjectTimes", new object[] {
+                        GetProjectTimesRequest});
+            return ((ProjectTime[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetProjectTimesAsync(ProjectTimeQuery GetProjectTimesRequest) {
+            this.GetProjectTimesAsync(GetProjectTimesRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetProjectTimesAsync(ProjectTimeQuery GetProjectTimesRequest, object userState) {
+            if ((this.GetProjectTimesOperationCompleted == null)) {
+                this.GetProjectTimesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetProjectTimesOperationCompleted);
+            }
+            this.InvokeAsync("GetProjectTimes", new object[] {
+                        GetProjectTimesRequest}, this.GetProjectTimesOperationCompleted, userState);
+        }
+        
+        private void OnGetProjectTimesOperationCompleted(object arg) {
+            if ((this.GetProjectTimesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetProjectTimesCompleted(this, new GetProjectTimesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("DeleteTaskByUUIDResponse", Namespace="http://timr.com/timrsync")]
+        public bool DeleteTaskByUUID([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string DeleteTaskByUUIDRequest) {
+            object[] results = this.Invoke("DeleteTaskByUUID", new object[] {
+                        DeleteTaskByUUIDRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DeleteTaskByUUIDAsync(string DeleteTaskByUUIDRequest) {
+            this.DeleteTaskByUUIDAsync(DeleteTaskByUUIDRequest, null);
+        }
+        
+        /// <remarks/>
+        public void DeleteTaskByUUIDAsync(string DeleteTaskByUUIDRequest, object userState) {
+            if ((this.DeleteTaskByUUIDOperationCompleted == null)) {
+                this.DeleteTaskByUUIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteTaskByUUIDOperationCompleted);
+            }
+            this.InvokeAsync("DeleteTaskByUUID", new object[] {
+                        DeleteTaskByUUIDRequest}, this.DeleteTaskByUUIDOperationCompleted, userState);
+        }
+        
+        private void OnDeleteTaskByUUIDOperationCompleted(object arg) {
+            if ((this.DeleteTaskByUUIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteTaskByUUIDCompleted(this, new DeleteTaskByUUIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("AddGroupResponse", Namespace="http://timr.com/timrsync")]
+        public long AddGroup([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] Group AddGroupRequest) {
+            object[] results = this.Invoke("AddGroup", new object[] {
+                        AddGroupRequest});
+            return ((long)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AddGroupAsync(Group AddGroupRequest) {
+            this.AddGroupAsync(AddGroupRequest, null);
+        }
+        
+        /// <remarks/>
+        public void AddGroupAsync(Group AddGroupRequest, object userState) {
+            if ((this.AddGroupOperationCompleted == null)) {
+                this.AddGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddGroupOperationCompleted);
+            }
+            this.InvokeAsync("AddGroup", new object[] {
+                        AddGroupRequest}, this.AddGroupOperationCompleted, userState);
+        }
+        
+        private void OnAddGroupOperationCompleted(object arg) {
+            if ((this.AddGroupCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddGroupCompleted(this, new AddGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("UpdateGroupResponse", Namespace="http://timr.com/timrsync")]
+        public bool UpdateGroup([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] Group UpdateGroupRequest) {
+            object[] results = this.Invoke("UpdateGroup", new object[] {
+                        UpdateGroupRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateGroupAsync(Group UpdateGroupRequest) {
+            this.UpdateGroupAsync(UpdateGroupRequest, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateGroupAsync(Group UpdateGroupRequest, object userState) {
+            if ((this.UpdateGroupOperationCompleted == null)) {
+                this.UpdateGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateGroupOperationCompleted);
+            }
+            this.InvokeAsync("UpdateGroup", new object[] {
+                        UpdateGroupRequest}, this.UpdateGroupOperationCompleted, userState);
+        }
+        
+        private void OnUpdateGroupOperationCompleted(object arg) {
+            if ((this.UpdateGroupCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateGroupCompleted(this, new UpdateGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("DeleteUserByUUIDResponse", Namespace="http://timr.com/timrsync")]
+        public bool DeleteUserByUUID([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string DeleteUserByUUIDRequest) {
+            object[] results = this.Invoke("DeleteUserByUUID", new object[] {
+                        DeleteUserByUUIDRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DeleteUserByUUIDAsync(string DeleteUserByUUIDRequest) {
+            this.DeleteUserByUUIDAsync(DeleteUserByUUIDRequest, null);
+        }
+        
+        /// <remarks/>
+        public void DeleteUserByUUIDAsync(string DeleteUserByUUIDRequest, object userState) {
+            if ((this.DeleteUserByUUIDOperationCompleted == null)) {
+                this.DeleteUserByUUIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteUserByUUIDOperationCompleted);
+            }
+            this.InvokeAsync("DeleteUserByUUID", new object[] {
+                        DeleteUserByUUIDRequest}, this.DeleteUserByUUIDOperationCompleted, userState);
+        }
+        
+        private void OnDeleteUserByUUIDOperationCompleted(object arg) {
+            if ((this.DeleteUserByUUIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteUserByUUIDCompleted(this, new DeleteUserByUUIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetDriveLogsResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("driveLogs", IsNullable=false)]
+        public DriveLog[] GetDriveLogs([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] DriveLogQuery GetDriveLogsRequest) {
+            object[] results = this.Invoke("GetDriveLogs", new object[] {
+                        GetDriveLogsRequest});
+            return ((DriveLog[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetDriveLogsAsync(DriveLogQuery GetDriveLogsRequest) {
+            this.GetDriveLogsAsync(GetDriveLogsRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetDriveLogsAsync(DriveLogQuery GetDriveLogsRequest, object userState) {
+            if ((this.GetDriveLogsOperationCompleted == null)) {
+                this.GetDriveLogsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDriveLogsOperationCompleted);
+            }
+            this.InvokeAsync("GetDriveLogs", new object[] {
+                        GetDriveLogsRequest}, this.GetDriveLogsOperationCompleted, userState);
+        }
+        
+        private void OnGetDriveLogsOperationCompleted(object arg) {
+            if ((this.GetDriveLogsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetDriveLogsCompleted(this, new GetDriveLogsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetCarsResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("cars", IsNullable=false)]
+        public Car[] GetCars([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetCarsRequest) {
+            object[] results = this.Invoke("GetCars", new object[] {
+                        GetCarsRequest});
+            return ((Car[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetCarsAsync(object GetCarsRequest) {
+            this.GetCarsAsync(GetCarsRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetCarsAsync(object GetCarsRequest, object userState) {
+            if ((this.GetCarsOperationCompleted == null)) {
+                this.GetCarsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCarsOperationCompleted);
+            }
+            this.InvokeAsync("GetCars", new object[] {
+                        GetCarsRequest}, this.GetCarsOperationCompleted, userState);
+        }
+        
+        private void OnGetCarsOperationCompleted(object arg) {
+            if ((this.GetCarsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetCarsCompleted(this, new GetCarsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("SetProjectTimesStatusResponse", Namespace="http://timr.com/timrsync")]
+        public bool SetProjectTimesStatus([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] ProjectTimesStatusRequestType SetProjectTimesStatusRequest) {
+            object[] results = this.Invoke("SetProjectTimesStatus", new object[] {
+                        SetProjectTimesStatusRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SetProjectTimesStatusAsync(ProjectTimesStatusRequestType SetProjectTimesStatusRequest) {
+            this.SetProjectTimesStatusAsync(SetProjectTimesStatusRequest, null);
+        }
+        
+        /// <remarks/>
+        public void SetProjectTimesStatusAsync(ProjectTimesStatusRequestType SetProjectTimesStatusRequest, object userState) {
+            if ((this.SetProjectTimesStatusOperationCompleted == null)) {
+                this.SetProjectTimesStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetProjectTimesStatusOperationCompleted);
+            }
+            this.InvokeAsync("SetProjectTimesStatus", new object[] {
+                        SetProjectTimesStatusRequest}, this.SetProjectTimesStatusOperationCompleted, userState);
+        }
+        
+        private void OnSetProjectTimesStatusOperationCompleted(object arg) {
+            if ((this.SetProjectTimesStatusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SetProjectTimesStatusCompleted(this, new SetProjectTimesStatusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetGroupsResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("groups", IsNullable=false)]
+        public Group[] GetGroups([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] GetGroupsRequest GetGroupsRequest) {
+            object[] results = this.Invoke("GetGroups", new object[] {
+                        GetGroupsRequest});
+            return ((Group[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetGroupsAsync(GetGroupsRequest GetGroupsRequest) {
+            this.GetGroupsAsync(GetGroupsRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetGroupsAsync(GetGroupsRequest GetGroupsRequest, object userState) {
+            if ((this.GetGroupsOperationCompleted == null)) {
+                this.GetGroupsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetGroupsOperationCompleted);
+            }
+            this.InvokeAsync("GetGroups", new object[] {
+                        GetGroupsRequest}, this.GetGroupsOperationCompleted, userState);
+        }
+        
+        private void OnGetGroupsOperationCompleted(object arg) {
+            if ((this.GetGroupsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetGroupsCompleted(this, new GetGroupsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("SetTaskExternalIdResponse", Namespace="http://timr.com/timrsync")]
+        public bool SetTaskExternalId([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] SetTaskExternalIdRequest SetTaskExternalIdRequest) {
+            object[] results = this.Invoke("SetTaskExternalId", new object[] {
+                        SetTaskExternalIdRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SetTaskExternalIdAsync(SetTaskExternalIdRequest SetTaskExternalIdRequest) {
+            this.SetTaskExternalIdAsync(SetTaskExternalIdRequest, null);
+        }
+        
+        /// <remarks/>
+        public void SetTaskExternalIdAsync(SetTaskExternalIdRequest SetTaskExternalIdRequest, object userState) {
+            if ((this.SetTaskExternalIdOperationCompleted == null)) {
+                this.SetTaskExternalIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetTaskExternalIdOperationCompleted);
+            }
+            this.InvokeAsync("SetTaskExternalId", new object[] {
+                        SetTaskExternalIdRequest}, this.SetTaskExternalIdOperationCompleted, userState);
+        }
+        
+        private void OnSetTaskExternalIdOperationCompleted(object arg) {
+            if ((this.SetTaskExternalIdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SetTaskExternalIdCompleted(this, new SetTaskExternalIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("DeleteWorkItemByUUIDResponse", Namespace="http://timr.com/timrsync")]
+        public bool DeleteWorkItemByUUID([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string DeleteWorkItemByUUIDRequest) {
+            object[] results = this.Invoke("DeleteWorkItemByUUID", new object[] {
+                        DeleteWorkItemByUUIDRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DeleteWorkItemByUUIDAsync(string DeleteWorkItemByUUIDRequest) {
+            this.DeleteWorkItemByUUIDAsync(DeleteWorkItemByUUIDRequest, null);
+        }
+        
+        /// <remarks/>
+        public void DeleteWorkItemByUUIDAsync(string DeleteWorkItemByUUIDRequest, object userState) {
+            if ((this.DeleteWorkItemByUUIDOperationCompleted == null)) {
+                this.DeleteWorkItemByUUIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteWorkItemByUUIDOperationCompleted);
+            }
+            this.InvokeAsync("DeleteWorkItemByUUID", new object[] {
+                        DeleteWorkItemByUUIDRequest}, this.DeleteWorkItemByUUIDOperationCompleted, userState);
+        }
+        
+        private void OnDeleteWorkItemByUUIDOperationCompleted(object arg) {
+            if ((this.DeleteWorkItemByUUIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteWorkItemByUUIDCompleted(this, new DeleteWorkItemByUUIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("SetWorkTimesStatusResponse", Namespace="http://timr.com/timrsync")]
+        public bool SetWorkTimesStatus([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] WorkTimesStatusRequestType SetWorkTimesStatusRequest) {
+            object[] results = this.Invoke("SetWorkTimesStatus", new object[] {
+                        SetWorkTimesStatusRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SetWorkTimesStatusAsync(WorkTimesStatusRequestType SetWorkTimesStatusRequest) {
+            this.SetWorkTimesStatusAsync(SetWorkTimesStatusRequest, null);
+        }
+        
+        /// <remarks/>
+        public void SetWorkTimesStatusAsync(WorkTimesStatusRequestType SetWorkTimesStatusRequest, object userState) {
+            if ((this.SetWorkTimesStatusOperationCompleted == null)) {
+                this.SetWorkTimesStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetWorkTimesStatusOperationCompleted);
+            }
+            this.InvokeAsync("SetWorkTimesStatus", new object[] {
+                        SetWorkTimesStatusRequest}, this.SetWorkTimesStatusOperationCompleted, userState);
+        }
+        
+        private void OnSetWorkTimesStatusOperationCompleted(object arg) {
+            if ((this.SetWorkTimesStatusCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SetWorkTimesStatusCompleted(this, new SetWorkTimesStatusCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("GetTaskByUUIDResponse", Namespace="http://timr.com/timrsync")]
+        public Task GetTaskByUUID([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string GetTaskByUUIDRequest) {
+            object[] results = this.Invoke("GetTaskByUUID", new object[] {
+                        GetTaskByUUIDRequest});
+            return ((Task)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetTaskByUUIDAsync(string GetTaskByUUIDRequest) {
+            this.GetTaskByUUIDAsync(GetTaskByUUIDRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetTaskByUUIDAsync(string GetTaskByUUIDRequest, object userState) {
+            if ((this.GetTaskByUUIDOperationCompleted == null)) {
+                this.GetTaskByUUIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetTaskByUUIDOperationCompleted);
+            }
+            this.InvokeAsync("GetTaskByUUID", new object[] {
+                        GetTaskByUUIDRequest}, this.GetTaskByUUIDOperationCompleted, userState);
+        }
+        
+        private void OnGetTaskByUUIDOperationCompleted(object arg) {
+            if ((this.GetTaskByUUIDCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetTaskByUUIDCompleted(this, new GetTaskByUUIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("AssignUserToGroupResponse", Namespace="http://timr.com/timrsync")]
+        public bool AssignUserToGroup([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] AssignUserToGroupRequest AssignUserToGroupRequest) {
+            object[] results = this.Invoke("AssignUserToGroup", new object[] {
+                        AssignUserToGroupRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AssignUserToGroupAsync(AssignUserToGroupRequest AssignUserToGroupRequest) {
+            this.AssignUserToGroupAsync(AssignUserToGroupRequest, null);
+        }
+        
+        /// <remarks/>
+        public void AssignUserToGroupAsync(AssignUserToGroupRequest AssignUserToGroupRequest, object userState) {
+            if ((this.AssignUserToGroupOperationCompleted == null)) {
+                this.AssignUserToGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAssignUserToGroupOperationCompleted);
+            }
+            this.InvokeAsync("AssignUserToGroup", new object[] {
+                        AssignUserToGroupRequest}, this.AssignUserToGroupOperationCompleted, userState);
+        }
+        
+        private void OnAssignUserToGroupOperationCompleted(object arg) {
+            if ((this.AssignUserToGroupCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AssignUserToGroupCompleted(this, new AssignUserToGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("AddWorkItemResponse", Namespace="http://timr.com/timrsync")]
+        public long AddWorkItem([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] WorkItem AddWorkItemRequest) {
+            object[] results = this.Invoke("AddWorkItem", new object[] {
+                        AddWorkItemRequest});
+            return ((long)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AddWorkItemAsync(WorkItem AddWorkItemRequest) {
+            this.AddWorkItemAsync(AddWorkItemRequest, null);
+        }
+        
+        /// <remarks/>
+        public void AddWorkItemAsync(WorkItem AddWorkItemRequest, object userState) {
+            if ((this.AddWorkItemOperationCompleted == null)) {
+                this.AddWorkItemOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddWorkItemOperationCompleted);
+            }
+            this.InvokeAsync("AddWorkItem", new object[] {
+                        AddWorkItemRequest}, this.AddWorkItemOperationCompleted, userState);
+        }
+        
+        private void OnAddWorkItemOperationCompleted(object arg) {
+            if ((this.AddWorkItemCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddWorkItemCompleted(this, new AddWorkItemCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("RemoveCarFromUserResponse", Namespace="http://timr.com/timrsync")]
+        public bool RemoveCarFromUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] RemoveCarFromUserRequest RemoveCarFromUserRequest) {
+            object[] results = this.Invoke("RemoveCarFromUser", new object[] {
+                        RemoveCarFromUserRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RemoveCarFromUserAsync(RemoveCarFromUserRequest RemoveCarFromUserRequest) {
+            this.RemoveCarFromUserAsync(RemoveCarFromUserRequest, null);
+        }
+        
+        /// <remarks/>
+        public void RemoveCarFromUserAsync(RemoveCarFromUserRequest RemoveCarFromUserRequest, object userState) {
+            if ((this.RemoveCarFromUserOperationCompleted == null)) {
+                this.RemoveCarFromUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRemoveCarFromUserOperationCompleted);
+            }
+            this.InvokeAsync("RemoveCarFromUser", new object[] {
+                        RemoveCarFromUserRequest}, this.RemoveCarFromUserOperationCompleted, userState);
+        }
+        
+        private void OnRemoveCarFromUserOperationCompleted(object arg) {
+            if ((this.RemoveCarFromUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RemoveCarFromUserCompleted(this, new RemoveCarFromUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("AssignTaskToUserResponse", Namespace="http://timr.com/timrsync")]
+        public bool AssignTaskToUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] AssignTaskToUserRequest AssignTaskToUserRequest) {
+            object[] results = this.Invoke("AssignTaskToUser", new object[] {
+                        AssignTaskToUserRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AssignTaskToUserAsync(AssignTaskToUserRequest AssignTaskToUserRequest) {
+            this.AssignTaskToUserAsync(AssignTaskToUserRequest, null);
+        }
+        
+        /// <remarks/>
+        public void AssignTaskToUserAsync(AssignTaskToUserRequest AssignTaskToUserRequest, object userState) {
+            if ((this.AssignTaskToUserOperationCompleted == null)) {
+                this.AssignTaskToUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAssignTaskToUserOperationCompleted);
+            }
+            this.InvokeAsync("AssignTaskToUser", new object[] {
+                        AssignTaskToUserRequest}, this.AssignTaskToUserOperationCompleted, userState);
+        }
+        
+        private void OnAssignTaskToUserOperationCompleted(object arg) {
+            if ((this.AssignTaskToUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AssignTaskToUserCompleted(this, new AssignTaskToUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetRunningProjectTimesResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("runningProjectTimes", IsNullable=false)]
+        public RunningProjectTime[] GetRunningProjectTimes([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetRunningProjectTimesRequest) {
+            object[] results = this.Invoke("GetRunningProjectTimes", new object[] {
+                        GetRunningProjectTimesRequest});
+            return ((RunningProjectTime[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetRunningProjectTimesAsync(object GetRunningProjectTimesRequest) {
+            this.GetRunningProjectTimesAsync(GetRunningProjectTimesRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetRunningProjectTimesAsync(object GetRunningProjectTimesRequest, object userState) {
+            if ((this.GetRunningProjectTimesOperationCompleted == null)) {
+                this.GetRunningProjectTimesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetRunningProjectTimesOperationCompleted);
+            }
+            this.InvokeAsync("GetRunningProjectTimes", new object[] {
+                        GetRunningProjectTimesRequest}, this.GetRunningProjectTimesOperationCompleted, userState);
+        }
+        
+        private void OnGetRunningProjectTimesOperationCompleted(object arg) {
+            if ((this.GetRunningProjectTimesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetRunningProjectTimesCompleted(this, new GetRunningProjectTimesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("GetGroupLeadersResponse", Namespace="http://timr.com/timrsync")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("leaders", IsNullable=false)]
+        public User[] GetGroupLeaders([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string GetGroupLeadersRequest) {
+            object[] results = this.Invoke("GetGroupLeaders", new object[] {
+                        GetGroupLeadersRequest});
+            return ((User[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetGroupLeadersAsync(string GetGroupLeadersRequest) {
+            this.GetGroupLeadersAsync(GetGroupLeadersRequest, null);
+        }
+        
+        /// <remarks/>
+        public void GetGroupLeadersAsync(string GetGroupLeadersRequest, object userState) {
+            if ((this.GetGroupLeadersOperationCompleted == null)) {
+                this.GetGroupLeadersOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetGroupLeadersOperationCompleted);
+            }
+            this.InvokeAsync("GetGroupLeaders", new object[] {
+                        GetGroupLeadersRequest}, this.GetGroupLeadersOperationCompleted, userState);
+        }
+        
+        private void OnGetGroupLeadersOperationCompleted(object arg) {
+            if ((this.GetGroupLeadersCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetGroupLeadersCompleted(this, new GetGroupLeadersCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("UpdateWorkItemIdResponse", Namespace="http://timr.com/timrsync")]
+        public bool UpdateWorkItemId([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] UpdateWorkItemIdRequest UpdateWorkItemIdRequest) {
+            object[] results = this.Invoke("UpdateWorkItemId", new object[] {
+                        UpdateWorkItemIdRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateWorkItemIdAsync(UpdateWorkItemIdRequest UpdateWorkItemIdRequest) {
+            this.UpdateWorkItemIdAsync(UpdateWorkItemIdRequest, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateWorkItemIdAsync(UpdateWorkItemIdRequest UpdateWorkItemIdRequest, object userState) {
+            if ((this.UpdateWorkItemIdOperationCompleted == null)) {
+                this.UpdateWorkItemIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateWorkItemIdOperationCompleted);
+            }
+            this.InvokeAsync("UpdateWorkItemId", new object[] {
+                        UpdateWorkItemIdRequest}, this.UpdateWorkItemIdOperationCompleted, userState);
+        }
+        
+        private void OnUpdateWorkItemIdOperationCompleted(object arg) {
+            if ((this.UpdateWorkItemIdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateWorkItemIdCompleted(this, new UpdateWorkItemIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("UpdateUserIdResponse", Namespace="http://timr.com/timrsync")]
+        public bool UpdateUserId([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] UpdateUserIdRequest UpdateUserIdRequest) {
+            object[] results = this.Invoke("UpdateUserId", new object[] {
+                        UpdateUserIdRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateUserIdAsync(UpdateUserIdRequest UpdateUserIdRequest) {
+            this.UpdateUserIdAsync(UpdateUserIdRequest, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateUserIdAsync(UpdateUserIdRequest UpdateUserIdRequest, object userState) {
+            if ((this.UpdateUserIdOperationCompleted == null)) {
+                this.UpdateUserIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateUserIdOperationCompleted);
+            }
+            this.InvokeAsync("UpdateUserId", new object[] {
+                        UpdateUserIdRequest}, this.UpdateUserIdOperationCompleted, userState);
+        }
+        
+        private void OnUpdateUserIdOperationCompleted(object arg) {
+            if ((this.UpdateUserIdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateUserIdCompleted(this, new UpdateUserIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("SaveProjectTimeResponse", Namespace="http://timr.com/timrsync")]
+        public long SaveProjectTime([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] ProjectTime SaveProjectTimeRequest) {
+            object[] results = this.Invoke("SaveProjectTime", new object[] {
+                        SaveProjectTimeRequest});
+            return ((long)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SaveProjectTimeAsync(ProjectTime SaveProjectTimeRequest) {
+            this.SaveProjectTimeAsync(SaveProjectTimeRequest, null);
+        }
+        
+        /// <remarks/>
+        public void SaveProjectTimeAsync(ProjectTime SaveProjectTimeRequest, object userState) {
+            if ((this.SaveProjectTimeOperationCompleted == null)) {
+                this.SaveProjectTimeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSaveProjectTimeOperationCompleted);
+            }
+            this.InvokeAsync("SaveProjectTime", new object[] {
+                        SaveProjectTimeRequest}, this.SaveProjectTimeOperationCompleted, userState);
+        }
+        
+        private void OnSaveProjectTimeOperationCompleted(object arg) {
+            if ((this.SaveProjectTimeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SaveProjectTimeCompleted(this, new SaveProjectTimeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("UpdateTaskResponse", Namespace="http://timr.com/timrsync")]
+        public bool UpdateTask([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] Task UpdateTaskRequest) {
+            object[] results = this.Invoke("UpdateTask", new object[] {
+                        UpdateTaskRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateTaskAsync(Task UpdateTaskRequest) {
+            this.UpdateTaskAsync(UpdateTaskRequest, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateTaskAsync(Task UpdateTaskRequest, object userState) {
+            if ((this.UpdateTaskOperationCompleted == null)) {
+                this.UpdateTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateTaskOperationCompleted);
+            }
+            this.InvokeAsync("UpdateTask", new object[] {
+                        UpdateTaskRequest}, this.UpdateTaskOperationCompleted, userState);
+        }
+        
+        private void OnUpdateTaskOperationCompleted(object arg) {
+            if ((this.UpdateTaskCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateTaskCompleted(this, new UpdateTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("DeleteTaskResponse", Namespace="http://timr.com/timrsync")]
+        public bool DeleteTask([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string DeleteTaskRequest) {
+            object[] results = this.Invoke("DeleteTask", new object[] {
+                        DeleteTaskRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DeleteTaskAsync(string DeleteTaskRequest) {
+            this.DeleteTaskAsync(DeleteTaskRequest, null);
+        }
+        
+        /// <remarks/>
+        public void DeleteTaskAsync(string DeleteTaskRequest, object userState) {
+            if ((this.DeleteTaskOperationCompleted == null)) {
+                this.DeleteTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteTaskOperationCompleted);
+            }
+            this.InvokeAsync("DeleteTask", new object[] {
+                        DeleteTaskRequest}, this.DeleteTaskOperationCompleted, userState);
+        }
+        
+        private void OnDeleteTaskOperationCompleted(object arg) {
+            if ((this.DeleteTaskCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteTaskCompleted(this, new DeleteTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("RemoveTaskFromUserResponse", Namespace="http://timr.com/timrsync")]
+        public bool RemoveTaskFromUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] RemoveTaskFromUserRequest RemoveTaskFromUserRequest) {
+            object[] results = this.Invoke("RemoveTaskFromUser", new object[] {
+                        RemoveTaskFromUserRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RemoveTaskFromUserAsync(RemoveTaskFromUserRequest RemoveTaskFromUserRequest) {
+            this.RemoveTaskFromUserAsync(RemoveTaskFromUserRequest, null);
+        }
+        
+        /// <remarks/>
+        public void RemoveTaskFromUserAsync(RemoveTaskFromUserRequest RemoveTaskFromUserRequest, object userState) {
+            if ((this.RemoveTaskFromUserOperationCompleted == null)) {
+                this.RemoveTaskFromUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRemoveTaskFromUserOperationCompleted);
+            }
+            this.InvokeAsync("RemoveTaskFromUser", new object[] {
+                        RemoveTaskFromUserRequest}, this.RemoveTaskFromUserOperationCompleted, userState);
+        }
+        
+        private void OnRemoveTaskFromUserOperationCompleted(object arg) {
+            if ((this.RemoveTaskFromUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RemoveTaskFromUserCompleted(this, new RemoveTaskFromUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("RemoveLeaderFromGroupResponse", Namespace="http://timr.com/timrsync")]
+        public bool RemoveLeaderFromGroup([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] RemoveLeaderFromGroupRequest RemoveLeaderFromGroupRequest) {
+            object[] results = this.Invoke("RemoveLeaderFromGroup", new object[] {
+                        RemoveLeaderFromGroupRequest});
+            return ((bool)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RemoveLeaderFromGroupAsync(RemoveLeaderFromGroupRequest RemoveLeaderFromGroupRequest) {
+            this.RemoveLeaderFromGroupAsync(RemoveLeaderFromGroupRequest, null);
+        }
+        
+        /// <remarks/>
+        public void RemoveLeaderFromGroupAsync(RemoveLeaderFromGroupRequest RemoveLeaderFromGroupRequest, object userState) {
+            if ((this.RemoveLeaderFromGroupOperationCompleted == null)) {
+                this.RemoveLeaderFromGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRemoveLeaderFromGroupOperationCompleted);
+            }
+            this.InvokeAsync("RemoveLeaderFromGroup", new object[] {
+                        RemoveLeaderFromGroupRequest}, this.RemoveLeaderFromGroupOperationCompleted, userState);
+        }
+        
+        private void OnRemoveLeaderFromGroupOperationCompleted(object arg) {
+            if ((this.RemoveLeaderFromGroupCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RemoveLeaderFromGroupCompleted(this, new RemoveLeaderFromGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
         [return: System.Xml.Serialization.XmlElementAttribute("UpdateTaskIdResponse", Namespace="http://timr.com/timrsync")]
         public bool UpdateTaskId([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] UpdateTaskIdRequest UpdateTaskIdRequest) {
             object[] results = this.Invoke("UpdateTaskId", new object[] {
@@ -1114,68 +2040,6 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlArrayAttribute("GetUsersResponse", Namespace="http://timr.com/timrsync")]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute("users", IsNullable=false)]
-        public User[] GetUsers([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetUsersRequest) {
-            object[] results = this.Invoke("GetUsers", new object[] {
-                        GetUsersRequest});
-            return ((User[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetUsersAsync(object GetUsersRequest) {
-            this.GetUsersAsync(GetUsersRequest, null);
-        }
-        
-        /// <remarks/>
-        public void GetUsersAsync(object GetUsersRequest, object userState) {
-            if ((this.GetUsersOperationCompleted == null)) {
-                this.GetUsersOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetUsersOperationCompleted);
-            }
-            this.InvokeAsync("GetUsers", new object[] {
-                        GetUsersRequest}, this.GetUsersOperationCompleted, userState);
-        }
-        
-        private void OnGetUsersOperationCompleted(object arg) {
-            if ((this.GetUsersCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetUsersCompleted(this, new GetUsersCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlArrayAttribute("GetWorkItemsResponse", Namespace="http://timr.com/timrsync")]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute("workItem", IsNullable=false)]
-        public WorkItem[] GetWorkItems([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetWorkItemsRequest) {
-            object[] results = this.Invoke("GetWorkItems", new object[] {
-                        GetWorkItemsRequest});
-            return ((WorkItem[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetWorkItemsAsync(object GetWorkItemsRequest) {
-            this.GetWorkItemsAsync(GetWorkItemsRequest, null);
-        }
-        
-        /// <remarks/>
-        public void GetWorkItemsAsync(object GetWorkItemsRequest, object userState) {
-            if ((this.GetWorkItemsOperationCompleted == null)) {
-                this.GetWorkItemsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetWorkItemsOperationCompleted);
-            }
-            this.InvokeAsync("GetWorkItems", new object[] {
-                        GetWorkItemsRequest}, this.GetWorkItemsOperationCompleted, userState);
-        }
-        
-        private void OnGetWorkItemsOperationCompleted(object arg) {
-            if ((this.GetWorkItemsCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetWorkItemsCompleted(this, new GetWorkItemsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
         [return: System.Xml.Serialization.XmlElementAttribute("AssignCarToUserResponse", Namespace="http://timr.com/timrsync")]
         public bool AssignCarToUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] AssignCarToUserRequest AssignCarToUserRequest) {
             object[] results = this.Invoke("AssignCarToUser", new object[] {
@@ -1206,151 +2070,61 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlArrayAttribute("GetCarsResponse", Namespace="http://timr.com/timrsync")]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute("cars", IsNullable=false)]
-        public Car[] GetCars([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] object GetCarsRequest) {
-            object[] results = this.Invoke("GetCars", new object[] {
-                        GetCarsRequest});
-            return ((Car[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetCarsAsync(object GetCarsRequest) {
-            this.GetCarsAsync(GetCarsRequest, null);
-        }
-        
-        /// <remarks/>
-        public void GetCarsAsync(object GetCarsRequest, object userState) {
-            if ((this.GetCarsOperationCompleted == null)) {
-                this.GetCarsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetCarsOperationCompleted);
-            }
-            this.InvokeAsync("GetCars", new object[] {
-                        GetCarsRequest}, this.GetCarsOperationCompleted, userState);
-        }
-        
-        private void OnGetCarsOperationCompleted(object arg) {
-            if ((this.GetCarsCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetCarsCompleted(this, new GetCarsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("UpdateUserResponse", Namespace="http://timr.com/timrsync")]
-        public bool UpdateUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] User UpdateUserRequest) {
-            object[] results = this.Invoke("UpdateUser", new object[] {
-                        UpdateUserRequest});
+        [return: System.Xml.Serialization.XmlElementAttribute("DeleteGroupResponse", Namespace="http://timr.com/timrsync")]
+        public bool DeleteGroup([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string DeleteGroupRequest) {
+            object[] results = this.Invoke("DeleteGroup", new object[] {
+                        DeleteGroupRequest});
             return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void UpdateUserAsync(User UpdateUserRequest) {
-            this.UpdateUserAsync(UpdateUserRequest, null);
+        public void DeleteGroupAsync(string DeleteGroupRequest) {
+            this.DeleteGroupAsync(DeleteGroupRequest, null);
         }
         
         /// <remarks/>
-        public void UpdateUserAsync(User UpdateUserRequest, object userState) {
-            if ((this.UpdateUserOperationCompleted == null)) {
-                this.UpdateUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateUserOperationCompleted);
+        public void DeleteGroupAsync(string DeleteGroupRequest, object userState) {
+            if ((this.DeleteGroupOperationCompleted == null)) {
+                this.DeleteGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteGroupOperationCompleted);
             }
-            this.InvokeAsync("UpdateUser", new object[] {
-                        UpdateUserRequest}, this.UpdateUserOperationCompleted, userState);
+            this.InvokeAsync("DeleteGroup", new object[] {
+                        DeleteGroupRequest}, this.DeleteGroupOperationCompleted, userState);
         }
         
-        private void OnUpdateUserOperationCompleted(object arg) {
-            if ((this.UpdateUserCompleted != null)) {
+        private void OnDeleteGroupOperationCompleted(object arg) {
+            if ((this.DeleteGroupCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.UpdateUserCompleted(this, new UpdateUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.DeleteGroupCompleted(this, new DeleteGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("GetTaskResponse", Namespace="http://timr.com/timrsync")]
-        public Task GetTask([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string GetTaskRequest) {
-            object[] results = this.Invoke("GetTask", new object[] {
-                        GetTaskRequest});
-            return ((Task)(results[0]));
+        [return: System.Xml.Serialization.XmlElementAttribute("InviteUserResponse", Namespace="http://timr.com/timrsync")]
+        public long InviteUser([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] User InviteUserRequest) {
+            object[] results = this.Invoke("InviteUser", new object[] {
+                        InviteUserRequest});
+            return ((long)(results[0]));
         }
         
         /// <remarks/>
-        public void GetTaskAsync(string GetTaskRequest) {
-            this.GetTaskAsync(GetTaskRequest, null);
+        public void InviteUserAsync(User InviteUserRequest) {
+            this.InviteUserAsync(InviteUserRequest, null);
         }
         
         /// <remarks/>
-        public void GetTaskAsync(string GetTaskRequest, object userState) {
-            if ((this.GetTaskOperationCompleted == null)) {
-                this.GetTaskOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetTaskOperationCompleted);
+        public void InviteUserAsync(User InviteUserRequest, object userState) {
+            if ((this.InviteUserOperationCompleted == null)) {
+                this.InviteUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInviteUserOperationCompleted);
             }
-            this.InvokeAsync("GetTask", new object[] {
-                        GetTaskRequest}, this.GetTaskOperationCompleted, userState);
+            this.InvokeAsync("InviteUser", new object[] {
+                        InviteUserRequest}, this.InviteUserOperationCompleted, userState);
         }
         
-        private void OnGetTaskOperationCompleted(object arg) {
-            if ((this.GetTaskCompleted != null)) {
+        private void OnInviteUserOperationCompleted(object arg) {
+            if ((this.InviteUserCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetTaskCompleted(this, new GetTaskCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlArrayAttribute("GetDriveLogsResponse", Namespace="http://timr.com/timrsync")]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute("driveLogs", IsNullable=false)]
-        public DriveLog[] GetDriveLogs([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] DriveLogQuery GetDriveLogsRequest) {
-            object[] results = this.Invoke("GetDriveLogs", new object[] {
-                        GetDriveLogsRequest});
-            return ((DriveLog[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void GetDriveLogsAsync(DriveLogQuery GetDriveLogsRequest) {
-            this.GetDriveLogsAsync(GetDriveLogsRequest, null);
-        }
-        
-        /// <remarks/>
-        public void GetDriveLogsAsync(DriveLogQuery GetDriveLogsRequest, object userState) {
-            if ((this.GetDriveLogsOperationCompleted == null)) {
-                this.GetDriveLogsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDriveLogsOperationCompleted);
-            }
-            this.InvokeAsync("GetDriveLogs", new object[] {
-                        GetDriveLogsRequest}, this.GetDriveLogsOperationCompleted, userState);
-        }
-        
-        private void OnGetDriveLogsOperationCompleted(object arg) {
-            if ((this.GetDriveLogsCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.GetDriveLogsCompleted(this, new GetDriveLogsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", OneWay=true, Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        public void SetProjectTimesStatus([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] ProjectTimesStatusRequestType SetProjectTimesStatusRequest) {
-            this.Invoke("SetProjectTimesStatus", new object[] {
-                        SetProjectTimesStatusRequest});
-        }
-        
-        /// <remarks/>
-        public void SetProjectTimesStatusAsync(ProjectTimesStatusRequestType SetProjectTimesStatusRequest) {
-            this.SetProjectTimesStatusAsync(SetProjectTimesStatusRequest, null);
-        }
-        
-        /// <remarks/>
-        public void SetProjectTimesStatusAsync(ProjectTimesStatusRequestType SetProjectTimesStatusRequest, object userState) {
-            if ((this.SetProjectTimesStatusOperationCompleted == null)) {
-                this.SetProjectTimesStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetProjectTimesStatusOperationCompleted);
-            }
-            this.InvokeAsync("SetProjectTimesStatus", new object[] {
-                        SetProjectTimesStatusRequest}, this.SetProjectTimesStatusOperationCompleted, userState);
-        }
-        
-        private void OnSetProjectTimesStatusOperationCompleted(object arg) {
-            if ((this.SetProjectTimesStatusCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.SetProjectTimesStatusCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.InviteUserCompleted(this, new InviteUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1384,87 +2158,61 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        [return: System.Xml.Serialization.XmlElementAttribute("SetTaskExternalIdResponse", Namespace="http://timr.com/timrsync")]
-        public bool SetTaskExternalId([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] SetTaskExternalIdRequest SetTaskExternalIdRequest) {
-            object[] results = this.Invoke("SetTaskExternalId", new object[] {
-                        SetTaskExternalIdRequest});
+        [return: System.Xml.Serialization.XmlElementAttribute("DeleteCarByUUIDResponse", Namespace="http://timr.com/timrsync")]
+        public bool DeleteCarByUUID([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string DeleteCarByUUIDRequest) {
+            object[] results = this.Invoke("DeleteCarByUUID", new object[] {
+                        DeleteCarByUUIDRequest});
             return ((bool)(results[0]));
         }
         
         /// <remarks/>
-        public void SetTaskExternalIdAsync(SetTaskExternalIdRequest SetTaskExternalIdRequest) {
-            this.SetTaskExternalIdAsync(SetTaskExternalIdRequest, null);
+        public void DeleteCarByUUIDAsync(string DeleteCarByUUIDRequest) {
+            this.DeleteCarByUUIDAsync(DeleteCarByUUIDRequest, null);
         }
         
         /// <remarks/>
-        public void SetTaskExternalIdAsync(SetTaskExternalIdRequest SetTaskExternalIdRequest, object userState) {
-            if ((this.SetTaskExternalIdOperationCompleted == null)) {
-                this.SetTaskExternalIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetTaskExternalIdOperationCompleted);
+        public void DeleteCarByUUIDAsync(string DeleteCarByUUIDRequest, object userState) {
+            if ((this.DeleteCarByUUIDOperationCompleted == null)) {
+                this.DeleteCarByUUIDOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteCarByUUIDOperationCompleted);
             }
-            this.InvokeAsync("SetTaskExternalId", new object[] {
-                        SetTaskExternalIdRequest}, this.SetTaskExternalIdOperationCompleted, userState);
+            this.InvokeAsync("DeleteCarByUUID", new object[] {
+                        DeleteCarByUUIDRequest}, this.DeleteCarByUUIDOperationCompleted, userState);
         }
         
-        private void OnSetTaskExternalIdOperationCompleted(object arg) {
-            if ((this.SetTaskExternalIdCompleted != null)) {
+        private void OnDeleteCarByUUIDOperationCompleted(object arg) {
+            if ((this.DeleteCarByUUIDCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.SetTaskExternalIdCompleted(this, new SetTaskExternalIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.DeleteCarByUUIDCompleted(this, new DeleteCarByUUIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", OneWay=true, Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        public void SetWorkTimesStatus([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] WorkTimesStatusRequestType SetWorkTimesStatusRequest) {
-            this.Invoke("SetWorkTimesStatus", new object[] {
-                        SetWorkTimesStatusRequest});
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
+        [return: System.Xml.Serialization.XmlElementAttribute("GetGroupResponse", Namespace="http://timr.com/timrsync")]
+        public Group GetGroup([System.Xml.Serialization.XmlElementAttribute(Namespace="http://timr.com/timrsync")] string GetGroupRequest) {
+            object[] results = this.Invoke("GetGroup", new object[] {
+                        GetGroupRequest});
+            return ((Group)(results[0]));
         }
         
         /// <remarks/>
-        public void SetWorkTimesStatusAsync(WorkTimesStatusRequestType SetWorkTimesStatusRequest) {
-            this.SetWorkTimesStatusAsync(SetWorkTimesStatusRequest, null);
+        public void GetGroupAsync(string GetGroupRequest) {
+            this.GetGroupAsync(GetGroupRequest, null);
         }
         
         /// <remarks/>
-        public void SetWorkTimesStatusAsync(WorkTimesStatusRequestType SetWorkTimesStatusRequest, object userState) {
-            if ((this.SetWorkTimesStatusOperationCompleted == null)) {
-                this.SetWorkTimesStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSetWorkTimesStatusOperationCompleted);
+        public void GetGroupAsync(string GetGroupRequest, object userState) {
+            if ((this.GetGroupOperationCompleted == null)) {
+                this.GetGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetGroupOperationCompleted);
             }
-            this.InvokeAsync("SetWorkTimesStatus", new object[] {
-                        SetWorkTimesStatusRequest}, this.SetWorkTimesStatusOperationCompleted, userState);
+            this.InvokeAsync("GetGroup", new object[] {
+                        GetGroupRequest}, this.GetGroupOperationCompleted, userState);
         }
         
-        private void OnSetWorkTimesStatusOperationCompleted(object arg) {
-            if ((this.SetWorkTimesStatusCompleted != null)) {
+        private void OnGetGroupOperationCompleted(object arg) {
+            if ((this.GetGroupCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.SetWorkTimesStatusCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", OneWay=true, Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Bare)]
-        public void UnlockProjectTimes([System.Xml.Serialization.XmlArrayAttribute(Namespace="http://timr.com/timrsync")] [System.Xml.Serialization.XmlArrayItemAttribute("ids", IsNullable=false)] long[] UnlockProjectTimesRequest) {
-            this.Invoke("UnlockProjectTimes", new object[] {
-                        UnlockProjectTimesRequest});
-        }
-        
-        /// <remarks/>
-        public void UnlockProjectTimesAsync(long[] UnlockProjectTimesRequest) {
-            this.UnlockProjectTimesAsync(UnlockProjectTimesRequest, null);
-        }
-        
-        /// <remarks/>
-        public void UnlockProjectTimesAsync(long[] UnlockProjectTimesRequest, object userState) {
-            if ((this.UnlockProjectTimesOperationCompleted == null)) {
-                this.UnlockProjectTimesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUnlockProjectTimesOperationCompleted);
-            }
-            this.InvokeAsync("UnlockProjectTimes", new object[] {
-                        UnlockProjectTimesRequest}, this.UnlockProjectTimesOperationCompleted, userState);
-        }
-        
-        private void OnUnlockProjectTimesOperationCompleted(object arg) {
-            if ((this.UnlockProjectTimesCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.UnlockProjectTimesCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.GetGroupCompleted(this, new GetGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1488,10 +2236,139 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://timr.com/timrsync")]
+    public partial class Car {
+        
+        private string externalIdField;
+        
+        private string nameField;
+        
+        private string plateField;
+        
+        private string uuidField;
+        
+        /// <remarks/>
+        public string externalId {
+            get {
+                return this.externalIdField;
+            }
+            set {
+                this.externalIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string plate {
+            get {
+                return this.plateField;
+            }
+            set {
+                this.plateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://timr.com/timrsync")]
+    public partial class Group {
+        
+        private string externalIdField;
+        
+        private string parentExternalIdField;
+        
+        private string nameField;
+        
+        private string descriptionField;
+        
+        private Group[] subgroupsField;
+        
+        /// <remarks/>
+        public string externalId {
+            get {
+                return this.externalIdField;
+            }
+            set {
+                this.externalIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string parentExternalId {
+            get {
+                return this.parentExternalIdField;
+            }
+            set {
+                this.parentExternalIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("subgroups")]
+        public Group[] subgroups {
+            get {
+                return this.subgroupsField;
+            }
+            set {
+                this.subgroupsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RunningDriveLog))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RunningProjectTime))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(RunningWorkTime))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1557,6 +2434,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public Position startPosition {
             get {
                 return this.startPositionField;
@@ -1608,7 +2486,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1653,7 +2531,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1671,6 +2549,22 @@ namespace TimrSyncTest.TimrSyncWebService {
         private string visitedField;
         
         private bool businessField;
+        
+        private string uuidField;
+        
+        private string customField1Field;
+        
+        private string customField2Field;
+        
+        private string customField3Field;
+        
+        private string customField4Field;
+        
+        private string customField5Field;
+        
+        private string customField6Field;
+        
+        private string customField7Field;
         
         /// <remarks/>
         public string externalCarId {
@@ -1693,6 +2587,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string route {
             get {
                 return this.routeField;
@@ -1703,6 +2598,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string purpose {
             get {
                 return this.purposeField;
@@ -1713,6 +2609,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string visited {
             get {
                 return this.visitedField;
@@ -1731,10 +2628,97 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.businessField = value;
             }
         }
+        
+        /// <remarks/>
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField1 {
+            get {
+                return this.customField1Field;
+            }
+            set {
+                this.customField1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField2 {
+            get {
+                return this.customField2Field;
+            }
+            set {
+                this.customField2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField3 {
+            get {
+                return this.customField3Field;
+            }
+            set {
+                this.customField3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField4 {
+            get {
+                return this.customField4Field;
+            }
+            set {
+                this.customField4Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField5 {
+            get {
+                return this.customField5Field;
+            }
+            set {
+                this.customField5Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField6 {
+            get {
+                return this.customField6Field;
+            }
+            set {
+                this.customField6Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField7 {
+            get {
+                return this.customField7Field;
+            }
+            set {
+                this.customField7Field = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1746,6 +2730,22 @@ namespace TimrSyncTest.TimrSyncWebService {
         private bool billableField;
         
         private string descriptionField;
+        
+        private string uuidField;
+        
+        private string customField1Field;
+        
+        private string customField2Field;
+        
+        private string customField3Field;
+        
+        private string customField4Field;
+        
+        private string customField5Field;
+        
+        private string customField6Field;
+        
+        private string customField7Field;
         
         /// <remarks/>
         public string externalTaskId {
@@ -1768,6 +2768,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string description {
             get {
                 return this.descriptionField;
@@ -1776,10 +2777,97 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.descriptionField = value;
             }
         }
+        
+        /// <remarks/>
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField1 {
+            get {
+                return this.customField1Field;
+            }
+            set {
+                this.customField1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField2 {
+            get {
+                return this.customField2Field;
+            }
+            set {
+                this.customField2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField3 {
+            get {
+                return this.customField3Field;
+            }
+            set {
+                this.customField3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField4 {
+            get {
+                return this.customField4Field;
+            }
+            set {
+                this.customField4Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField5 {
+            get {
+                return this.customField5Field;
+            }
+            set {
+                this.customField5Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField6 {
+            get {
+                return this.customField6Field;
+            }
+            set {
+                this.customField6Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField7 {
+            get {
+                return this.customField7Field;
+            }
+            set {
+                this.customField7Field = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1789,6 +2877,22 @@ namespace TimrSyncTest.TimrSyncWebService {
         private string externalWorkItemIdField;
         
         private string descriptionField;
+        
+        private string uuidField;
+        
+        private string customField1Field;
+        
+        private string customField2Field;
+        
+        private string customField3Field;
+        
+        private string customField4Field;
+        
+        private string customField5Field;
+        
+        private string customField6Field;
+        
+        private string customField7Field;
         
         /// <remarks/>
         public string externalWorkItemId {
@@ -1801,6 +2905,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string description {
             get {
                 return this.descriptionField;
@@ -1809,10 +2914,97 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.descriptionField = value;
             }
         }
+        
+        /// <remarks/>
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField1 {
+            get {
+                return this.customField1Field;
+            }
+            set {
+                this.customField1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField2 {
+            get {
+                return this.customField2Field;
+            }
+            set {
+                this.customField2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField3 {
+            get {
+                return this.customField3Field;
+            }
+            set {
+                this.customField3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField4 {
+            get {
+                return this.customField4Field;
+            }
+            set {
+                this.customField4Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField5 {
+            get {
+                return this.customField5Field;
+            }
+            set {
+                this.customField5Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField6 {
+            get {
+                return this.customField6Field;
+            }
+            set {
+                this.customField6Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField7 {
+            get {
+                return this.customField7Field;
+            }
+            set {
+                this.customField7Field = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1846,7 +3038,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://timr.com/timrsync")]
     public enum DriveLogStatus {
@@ -1865,7 +3057,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1899,7 +3091,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://timr.com/timrsync")]
     public enum WorkTimeStatus {
@@ -1915,7 +3107,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1949,7 +3141,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://timr.com/timrsync")]
     public enum ProjectTimeStatus {
@@ -1968,52 +3160,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://timr.com/timrsync")]
-    public partial class Car {
-        
-        private string externalIdField;
-        
-        private string nameField;
-        
-        private string plateField;
-        
-        /// <remarks/>
-        public string externalId {
-            get {
-                return this.externalIdField;
-            }
-            set {
-                this.externalIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string plate {
-            get {
-                return this.plateField;
-            }
-            set {
-                this.plateField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2026,6 +3173,10 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private string descriptionField;
         
+        private string uuidField;
+        
+        private string shortNameField;
+        
         /// <remarks/>
         public string externalId {
             get {
@@ -2047,6 +3198,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string description {
             get {
                 return this.descriptionField;
@@ -2055,13 +3207,34 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.descriptionField = value;
             }
         }
+        
+        /// <remarks/>
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string shortName {
+            get {
+                return this.shortNameField;
+            }
+            set {
+                this.shortNameField = value;
+            }
+        }
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DriveLogQuery))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectTimeQuery))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkTimeQuery))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2070,23 +3243,24 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private string externalUserIdField;
         
-        private System.DateTime startField;
+        private System.Nullable<System.DateTime> startField;
         
         private bool startFieldSpecified;
         
-        private System.DateTime endField;
+        private System.Nullable<System.DateTime> endField;
         
         private bool endFieldSpecified;
         
-        private System.DateTime lastModifiedField;
+        private System.Nullable<System.DateTime> lastModifiedField;
         
         private bool lastModifiedFieldSpecified;
         
-        private bool closedField;
+        private System.Nullable<bool> closedField;
         
         private bool closedFieldSpecified;
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string externalUserId {
             get {
                 return this.externalUserIdField;
@@ -2097,7 +3271,8 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
-        public System.DateTime start {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> start {
             get {
                 return this.startField;
             }
@@ -2118,7 +3293,8 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
-        public System.DateTime end {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> end {
             get {
                 return this.endField;
             }
@@ -2139,7 +3315,8 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
-        public System.DateTime lastModified {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> lastModified {
             get {
                 return this.lastModifiedField;
             }
@@ -2160,7 +3337,8 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
-        public bool closed {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> closed {
             get {
                 return this.closedField;
             }
@@ -2182,7 +3360,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2197,13 +3375,14 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private string visitedField;
         
-        private bool businessField;
+        private System.Nullable<bool> businessField;
         
         private bool businessFieldSpecified;
         
         private DriveLogStatus[] statusesField;
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string externalCarId {
             get {
                 return this.externalCarIdField;
@@ -2214,6 +3393,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string route {
             get {
                 return this.routeField;
@@ -2224,6 +3404,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string purpose {
             get {
                 return this.purposeField;
@@ -2234,6 +3415,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string visited {
             get {
                 return this.visitedField;
@@ -2244,7 +3426,8 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
-        public bool business {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> business {
             get {
                 return this.businessField;
             }
@@ -2277,7 +3460,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2288,13 +3471,18 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private string descriptionField;
         
-        private bool billableField;
+        private System.Nullable<bool> billableField;
         
         private bool billableFieldSpecified;
         
         private ProjectTimeStatus[] statusesField;
         
+        private System.Nullable<bool> includeChildTasksField;
+        
+        private bool includeChildTasksFieldSpecified;
+        
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string externalTaskId {
             get {
                 return this.externalTaskIdField;
@@ -2305,6 +3493,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string description {
             get {
                 return this.descriptionField;
@@ -2315,7 +3504,8 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
-        public bool billable {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> billable {
             get {
                 return this.billableField;
             }
@@ -2345,10 +3535,32 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.statusesField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> includeChildTasks {
+            get {
+                return this.includeChildTasksField;
+            }
+            set {
+                this.includeChildTasksField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool includeChildTasksSpecified {
+            get {
+                return this.includeChildTasksFieldSpecified;
+            }
+            set {
+                this.includeChildTasksFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2362,6 +3574,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         private WorkTimeStatus[] statusesField;
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string externalWorkItemId {
             get {
                 return this.externalWorkItemIdField;
@@ -2372,6 +3585,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string description {
             get {
                 return this.descriptionField;
@@ -2394,10 +3608,227 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://timr.com/timrsync")]
+    public partial class User {
+        
+        private string externalIdField;
+        
+        private string loginField;
+        
+        private string firstnameField;
+        
+        private string lastnameField;
+        
+        private string emailField;
+        
+        private bool isAdminField;
+        
+        private System.Nullable<System.DateTime> resignDateField;
+        
+        private bool resignDateFieldSpecified;
+        
+        private System.Nullable<decimal> workingHoursField;
+        
+        private bool workingHoursFieldSpecified;
+        
+        private System.Nullable<bool> isTeamLeaderField;
+        
+        private string uuidField;
+        
+        private System.Nullable<System.DateTime> entryDateField;
+        
+        private bool entryDateFieldSpecified;
+        
+        private string ssoProviderField;
+        
+        private string ssoIdentifierField;
+        
+        public User() {
+            this.isTeamLeaderField = false;
+        }
+        
+        /// <remarks/>
+        public string externalId {
+            get {
+                return this.externalIdField;
+            }
+            set {
+                this.externalIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string login {
+            get {
+                return this.loginField;
+            }
+            set {
+                this.loginField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string firstname {
+            get {
+                return this.firstnameField;
+            }
+            set {
+                this.firstnameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string lastname {
+            get {
+                return this.lastnameField;
+            }
+            set {
+                this.lastnameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool isAdmin {
+            get {
+                return this.isAdminField;
+            }
+            set {
+                this.isAdminField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", IsNullable=true)]
+        public System.Nullable<System.DateTime> resignDate {
+            get {
+                return this.resignDateField;
+            }
+            set {
+                this.resignDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool resignDateSpecified {
+            get {
+                return this.resignDateFieldSpecified;
+            }
+            set {
+                this.resignDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> workingHours {
+            get {
+                return this.workingHoursField;
+            }
+            set {
+                this.workingHoursField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool workingHoursSpecified {
+            get {
+                return this.workingHoursFieldSpecified;
+            }
+            set {
+                this.workingHoursFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public System.Nullable<bool> isTeamLeader {
+            get {
+                return this.isTeamLeaderField;
+            }
+            set {
+                this.isTeamLeaderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", IsNullable=true)]
+        public System.Nullable<System.DateTime> entryDate {
+            get {
+                return this.entryDateField;
+            }
+            set {
+                this.entryDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool entryDateSpecified {
+            get {
+                return this.entryDateFieldSpecified;
+            }
+            set {
+                this.entryDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ssoProvider {
+            get {
+                return this.ssoProviderField;
+            }
+            set {
+                this.ssoProviderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ssoIdentifier {
+            get {
+                return this.ssoIdentifierField;
+            }
+            set {
+                this.ssoIdentifierField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DriveLog))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProjectTime))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WorkTime))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2503,6 +3934,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public Position startPosition {
             get {
                 return this.startPositionField;
@@ -2513,6 +3945,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public Position endPosition {
             get {
                 return this.endPositionField;
@@ -2574,7 +4007,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2595,7 +4028,27 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private bool businessField;
         
-        private DriveLogStatus statusField;
+        private System.Nullable<DriveLogStatus> statusField;
+        
+        private string uuidField;
+        
+        private string customField1Field;
+        
+        private string customField2Field;
+        
+        private string customField3Field;
+        
+        private string customField4Field;
+        
+        private string customField5Field;
+        
+        private string customField6Field;
+        
+        private string customField7Field;
+        
+        private string userUuidField;
+        
+        private string carUuidField;
         
         public DriveLog() {
             this.statusField = DriveLogStatus.CHANGEABLE;
@@ -2632,6 +4085,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string route {
             get {
                 return this.routeField;
@@ -2642,6 +4096,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string purpose {
             get {
                 return this.purposeField;
@@ -2652,6 +4107,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string visited {
             get {
                 return this.visitedField;
@@ -2672,8 +4128,9 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         [System.ComponentModel.DefaultValueAttribute(DriveLogStatus.CHANGEABLE)]
-        public DriveLogStatus status {
+        public System.Nullable<DriveLogStatus> status {
             get {
                 return this.statusField;
             }
@@ -2681,10 +4138,117 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.statusField = value;
             }
         }
+        
+        /// <remarks/>
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField1 {
+            get {
+                return this.customField1Field;
+            }
+            set {
+                this.customField1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField2 {
+            get {
+                return this.customField2Field;
+            }
+            set {
+                this.customField2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField3 {
+            get {
+                return this.customField3Field;
+            }
+            set {
+                this.customField3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField4 {
+            get {
+                return this.customField4Field;
+            }
+            set {
+                this.customField4Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField5 {
+            get {
+                return this.customField5Field;
+            }
+            set {
+                this.customField5Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField6 {
+            get {
+                return this.customField6Field;
+            }
+            set {
+                this.customField6Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField7 {
+            get {
+                return this.customField7Field;
+            }
+            set {
+                this.customField7Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string userUuid {
+            get {
+                return this.userUuidField;
+            }
+            set {
+                this.userUuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string carUuid {
+            get {
+                return this.carUuidField;
+            }
+            set {
+                this.carUuidField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2699,7 +4263,35 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private bool billableField;
         
-        private ProjectTimeStatus statusField;
+        private System.Nullable<ProjectTimeStatus> statusField;
+        
+        private string uuidField;
+        
+        private string customField1Field;
+        
+        private string customField2Field;
+        
+        private string customField3Field;
+        
+        private string customField4Field;
+        
+        private string customField5Field;
+        
+        private string customField6Field;
+        
+        private string customField7Field;
+        
+        private string userUuidField;
+        
+        private string taskUuidField;
+        
+        private System.Nullable<decimal> hourlyRateField;
+        
+        private bool hourlyRateFieldSpecified;
+        
+        private System.Nullable<decimal> hourlyRateInternalField;
+        
+        private bool hourlyRateInternalFieldSpecified;
         
         public ProjectTime() {
             this.statusField = ProjectTimeStatus.CHANGEABLE;
@@ -2726,6 +4318,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string description {
             get {
                 return this.descriptionField;
@@ -2746,8 +4339,9 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         [System.ComponentModel.DefaultValueAttribute(ProjectTimeStatus.CHANGEABLE)]
-        public ProjectTimeStatus status {
+        public System.Nullable<ProjectTimeStatus> status {
             get {
                 return this.statusField;
             }
@@ -2755,10 +4349,161 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.statusField = value;
             }
         }
+        
+        /// <remarks/>
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField1 {
+            get {
+                return this.customField1Field;
+            }
+            set {
+                this.customField1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField2 {
+            get {
+                return this.customField2Field;
+            }
+            set {
+                this.customField2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField3 {
+            get {
+                return this.customField3Field;
+            }
+            set {
+                this.customField3Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField4 {
+            get {
+                return this.customField4Field;
+            }
+            set {
+                this.customField4Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField5 {
+            get {
+                return this.customField5Field;
+            }
+            set {
+                this.customField5Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField6 {
+            get {
+                return this.customField6Field;
+            }
+            set {
+                this.customField6Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField7 {
+            get {
+                return this.customField7Field;
+            }
+            set {
+                this.customField7Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string userUuid {
+            get {
+                return this.userUuidField;
+            }
+            set {
+                this.userUuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string taskUuid {
+            get {
+                return this.taskUuidField;
+            }
+            set {
+                this.taskUuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> hourlyRate {
+            get {
+                return this.hourlyRateField;
+            }
+            set {
+                this.hourlyRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool hourlyRateSpecified {
+            get {
+                return this.hourlyRateFieldSpecified;
+            }
+            set {
+                this.hourlyRateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> hourlyRateInternal {
+            get {
+                return this.hourlyRateInternalField;
+            }
+            set {
+                this.hourlyRateInternalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool hourlyRateInternalSpecified {
+            get {
+                return this.hourlyRateInternalFieldSpecified;
+            }
+            set {
+                this.hourlyRateInternalFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2769,7 +4514,27 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private string descriptionField;
         
-        private WorkTimeStatus statusField;
+        private System.Nullable<WorkTimeStatus> statusField;
+        
+        private string uuidField;
+        
+        private string customField1Field;
+        
+        private string customField2Field;
+        
+        private string customField3Field;
+        
+        private string customField4Field;
+        
+        private string customField5Field;
+        
+        private string customField6Field;
+        
+        private string customField7Field;
+        
+        private string userUuidField;
+        
+        private string workItemUuidField;
         
         public WorkTime() {
             this.statusField = WorkTimeStatus.CHANGEABLE;
@@ -2786,6 +4551,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string description {
             get {
                 return this.descriptionField;
@@ -2796,8 +4562,9 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         [System.ComponentModel.DefaultValueAttribute(WorkTimeStatus.CHANGEABLE)]
-        public WorkTimeStatus status {
+        public System.Nullable<WorkTimeStatus> status {
             get {
                 return this.statusField;
             }
@@ -2805,159 +4572,117 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.statusField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://timr.com/timrsync")]
-    public partial class User {
-        
-        private string externalIdField;
-        
-        private string loginField;
-        
-        private string firstnameField;
-        
-        private string lastnameField;
-        
-        private string emailField;
-        
-        private bool isAdminField;
-        
-        private System.DateTime resignDateField;
-        
-        private bool resignDateFieldSpecified;
-        
-        private decimal workingHoursField;
-        
-        private bool workingHoursFieldSpecified;
-        
-        private bool isTeamLeaderField;
-        
-        public User() {
-            this.isTeamLeaderField = false;
-        }
         
         /// <remarks/>
-        public string externalId {
+        public string uuid {
             get {
-                return this.externalIdField;
+                return this.uuidField;
             }
             set {
-                this.externalIdField = value;
+                this.uuidField = value;
             }
         }
         
         /// <remarks/>
-        public string login {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField1 {
             get {
-                return this.loginField;
+                return this.customField1Field;
             }
             set {
-                this.loginField = value;
+                this.customField1Field = value;
             }
         }
         
         /// <remarks/>
-        public string firstname {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField2 {
             get {
-                return this.firstnameField;
+                return this.customField2Field;
             }
             set {
-                this.firstnameField = value;
+                this.customField2Field = value;
             }
         }
         
         /// <remarks/>
-        public string lastname {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField3 {
             get {
-                return this.lastnameField;
+                return this.customField3Field;
             }
             set {
-                this.lastnameField = value;
+                this.customField3Field = value;
             }
         }
         
         /// <remarks/>
-        public string email {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField4 {
             get {
-                return this.emailField;
+                return this.customField4Field;
             }
             set {
-                this.emailField = value;
+                this.customField4Field = value;
             }
         }
         
         /// <remarks/>
-        public bool isAdmin {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField5 {
             get {
-                return this.isAdminField;
+                return this.customField5Field;
             }
             set {
-                this.isAdminField = value;
+                this.customField5Field = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
-        public System.DateTime resignDate {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField6 {
             get {
-                return this.resignDateField;
+                return this.customField6Field;
             }
             set {
-                this.resignDateField = value;
+                this.customField6Field = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool resignDateSpecified {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string customField7 {
             get {
-                return this.resignDateFieldSpecified;
+                return this.customField7Field;
             }
             set {
-                this.resignDateFieldSpecified = value;
+                this.customField7Field = value;
             }
         }
         
         /// <remarks/>
-        public decimal workingHours {
+        public string userUuid {
             get {
-                return this.workingHoursField;
+                return this.userUuidField;
             }
             set {
-                this.workingHoursField = value;
+                this.userUuidField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool workingHoursSpecified {
+        public string workItemUuid {
             get {
-                return this.workingHoursFieldSpecified;
+                return this.workItemUuidField;
             }
             set {
-                this.workingHoursFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool isTeamLeader {
-            get {
-                return this.isTeamLeaderField;
-            }
-            set {
-                this.isTeamLeaderField = value;
+                this.workItemUuidField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2972,11 +4697,11 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private string descriptionField;
         
-        private System.DateTime startField;
+        private System.Nullable<System.DateTime> startField;
         
         private bool startFieldSpecified;
         
-        private System.DateTime endField;
+        private System.Nullable<System.DateTime> endField;
         
         private bool endFieldSpecified;
         
@@ -2992,6 +4717,64 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private string customField3Field;
         
+        private string uuidField;
+        
+        private System.Nullable<BudgetPlanningType> budgetPlanningTypeField;
+        
+        private bool budgetPlanningTypeFieldSpecified;
+        
+        private System.Nullable<bool> budgetPlanningTypeInheritedField;
+        
+        private bool budgetPlanningTypeInheritedFieldSpecified;
+        
+        private System.Nullable<decimal> hoursPlannedField;
+        
+        private bool hoursPlannedFieldSpecified;
+        
+        private System.Nullable<decimal> hourlyRateField;
+        
+        private bool hourlyRateFieldSpecified;
+        
+        private System.Nullable<decimal> budgetPlannedField;
+        
+        private bool budgetPlannedFieldSpecified;
+        
+        private string externalCommentsField;
+        
+        private System.Nullable<System.DateTime> lockDateField;
+        
+        private bool lockDateFieldSpecified;
+        
+        private string parentUuidField;
+        
+        private bool descriptionRequiredField;
+        
+        private string addressField;
+        
+        private string cityField;
+        
+        private string zipCodeField;
+        
+        private string stateField;
+        
+        private string countryField;
+        
+        private System.Nullable<double> latitudeField;
+        
+        private bool latitudeFieldSpecified;
+        
+        private System.Nullable<double> longitudeField;
+        
+        private bool longitudeFieldSpecified;
+        
+        private System.Nullable<int> locationRestrictionRadiusField;
+        
+        private bool locationRestrictionRadiusFieldSpecified;
+        
+        public Task() {
+            this.descriptionRequiredField = false;
+        }
+        
         /// <remarks/>
         public string externalId {
             get {
@@ -3003,6 +4786,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string parentExternalId {
             get {
                 return this.parentExternalIdField;
@@ -3023,6 +4807,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string description {
             get {
                 return this.descriptionField;
@@ -3033,8 +4818,8 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
-        public System.DateTime start {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", IsNullable=true)]
+        public System.Nullable<System.DateTime> start {
             get {
                 return this.startField;
             }
@@ -3055,8 +4840,8 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
-        public System.DateTime end {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", IsNullable=true)]
+        public System.Nullable<System.DateTime> end {
             get {
                 return this.endField;
             }
@@ -3108,6 +4893,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string customField1 {
             get {
                 return this.customField1Field;
@@ -3118,6 +4904,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string customField2 {
             get {
                 return this.customField2Field;
@@ -3128,6 +4915,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string customField3 {
             get {
                 return this.customField3Field;
@@ -3136,21 +4924,438 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.customField3Field = value;
             }
         }
+        
+        /// <remarks/>
+        public string uuid {
+            get {
+                return this.uuidField;
+            }
+            set {
+                this.uuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<BudgetPlanningType> budgetPlanningType {
+            get {
+                return this.budgetPlanningTypeField;
+            }
+            set {
+                this.budgetPlanningTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool budgetPlanningTypeSpecified {
+            get {
+                return this.budgetPlanningTypeFieldSpecified;
+            }
+            set {
+                this.budgetPlanningTypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> budgetPlanningTypeInherited {
+            get {
+                return this.budgetPlanningTypeInheritedField;
+            }
+            set {
+                this.budgetPlanningTypeInheritedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool budgetPlanningTypeInheritedSpecified {
+            get {
+                return this.budgetPlanningTypeInheritedFieldSpecified;
+            }
+            set {
+                this.budgetPlanningTypeInheritedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> hoursPlanned {
+            get {
+                return this.hoursPlannedField;
+            }
+            set {
+                this.hoursPlannedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool hoursPlannedSpecified {
+            get {
+                return this.hoursPlannedFieldSpecified;
+            }
+            set {
+                this.hoursPlannedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> hourlyRate {
+            get {
+                return this.hourlyRateField;
+            }
+            set {
+                this.hourlyRateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool hourlyRateSpecified {
+            get {
+                return this.hourlyRateFieldSpecified;
+            }
+            set {
+                this.hourlyRateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> budgetPlanned {
+            get {
+                return this.budgetPlannedField;
+            }
+            set {
+                this.budgetPlannedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool budgetPlannedSpecified {
+            get {
+                return this.budgetPlannedFieldSpecified;
+            }
+            set {
+                this.budgetPlannedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalComments {
+            get {
+                return this.externalCommentsField;
+            }
+            set {
+                this.externalCommentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", IsNullable=true)]
+        public System.Nullable<System.DateTime> lockDate {
+            get {
+                return this.lockDateField;
+            }
+            set {
+                this.lockDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool lockDateSpecified {
+            get {
+                return this.lockDateFieldSpecified;
+            }
+            set {
+                this.lockDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string parentUuid {
+            get {
+                return this.parentUuidField;
+            }
+            set {
+                this.parentUuidField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool descriptionRequired {
+            get {
+                return this.descriptionRequiredField;
+            }
+            set {
+                this.descriptionRequiredField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string city {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string zipCode {
+            get {
+                return this.zipCodeField;
+            }
+            set {
+                this.zipCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<double> latitude {
+            get {
+                return this.latitudeField;
+            }
+            set {
+                this.latitudeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool latitudeSpecified {
+            get {
+                return this.latitudeFieldSpecified;
+            }
+            set {
+                this.latitudeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<double> longitude {
+            get {
+                return this.longitudeField;
+            }
+            set {
+                this.longitudeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool longitudeSpecified {
+            get {
+                return this.longitudeFieldSpecified;
+            }
+            set {
+                this.longitudeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<int> locationRestrictionRadius {
+            get {
+                return this.locationRestrictionRadiusField;
+            }
+            set {
+                this.locationRestrictionRadiusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool locationRestrictionRadiusSpecified {
+            get {
+                return this.locationRestrictionRadiusFieldSpecified;
+            }
+            set {
+                this.locationRestrictionRadiusFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://timr.com/timrsync")]
+    public enum BudgetPlanningType {
+        
+        /// <remarks/>
+        NONE,
+        
+        /// <remarks/>
+        TASK_HOURLY_RATE,
+        
+        /// <remarks/>
+        USER_HOURLY_RATE,
+        
+        /// <remarks/>
+        FIXED_PRICE,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
-    public partial class AssignTaskToUserRequest {
+    public partial class GetTasksRequest {
+        
+        private string nameField;
+        
+        private System.Nullable<bool> activeField;
+        
+        private bool activeFieldSpecified;
+        
+        private System.Nullable<bool> billableField;
+        
+        private bool billableFieldSpecified;
+        
+        private System.Nullable<bool> bookableField;
+        
+        private bool bookableFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> active {
+            get {
+                return this.activeField;
+            }
+            set {
+                this.activeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool activeSpecified {
+            get {
+                return this.activeFieldSpecified;
+            }
+            set {
+                this.activeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> billable {
+            get {
+                return this.billableField;
+            }
+            set {
+                this.billableField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool billableSpecified {
+            get {
+                return this.billableFieldSpecified;
+            }
+            set {
+                this.billableFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> bookable {
+            get {
+                return this.bookableField;
+            }
+            set {
+                this.bookableField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool bookableSpecified {
+            get {
+                return this.bookableFieldSpecified;
+            }
+            set {
+                this.bookableFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class RemoveUserFromGroupRequest {
         
         private string externalUserIdField;
         
-        private string externalTaskIdField;
+        private string externalGroupIdField;
+        
+        private string uuidUserField;
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string externalUserId {
             get {
                 return this.externalUserIdField;
@@ -3161,6 +5366,103 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalGroupId {
+            get {
+                return this.externalGroupIdField;
+            }
+            set {
+                this.externalGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidUser {
+            get {
+                return this.uuidUserField;
+            }
+            set {
+                this.uuidUserField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class AssignLeaderToGroupRequest {
+        
+        private string externalUserIdField;
+        
+        private string externalGroupIdField;
+        
+        private string uuidUserField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalUserId {
+            get {
+                return this.externalUserIdField;
+            }
+            set {
+                this.externalUserIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalGroupId {
+            get {
+                return this.externalGroupIdField;
+            }
+            set {
+                this.externalGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidUser {
+            get {
+                return this.uuidUserField;
+            }
+            set {
+                this.uuidUserField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class RemoveGroupFromTaskRequest {
+        
+        private string externalGroupIdField;
+        
+        private string externalTaskIdField;
+        
+        private string uuidTaskField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalGroupId {
+            get {
+                return this.externalGroupIdField;
+            }
+            set {
+                this.externalGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string externalTaskId {
             get {
                 return this.externalTaskIdField;
@@ -3169,142 +5471,21 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.externalTaskIdField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
-    public partial class UpdateWorkItemIdRequest {
-        
-        private WorkItem workItemField;
-        
-        private string newExternalWorkItemIdField;
         
         /// <remarks/>
-        public WorkItem workItem {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidTask {
             get {
-                return this.workItemField;
+                return this.uuidTaskField;
             }
             set {
-                this.workItemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string newExternalWorkItemId {
-            get {
-                return this.newExternalWorkItemIdField;
-            }
-            set {
-                this.newExternalWorkItemIdField = value;
+                this.uuidTaskField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
-    public partial class UpdateUserIdRequest {
-        
-        private User userField;
-        
-        private string newExternalUserIdField;
-        
-        /// <remarks/>
-        public User user {
-            get {
-                return this.userField;
-            }
-            set {
-                this.userField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string newExternalUserId {
-            get {
-                return this.newExternalUserIdField;
-            }
-            set {
-                this.newExternalUserIdField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
-    public partial class RemoveTaskFromUserRequest {
-        
-        private string externalUserIdField;
-        
-        private string externalTaskIdField;
-        
-        /// <remarks/>
-        public string externalUserId {
-            get {
-                return this.externalUserIdField;
-            }
-            set {
-                this.externalUserIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string externalTaskId {
-            get {
-                return this.externalTaskIdField;
-            }
-            set {
-                this.externalTaskIdField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
-    public partial class RemoveCarFromUserRequest {
-        
-        private string externalUserIdField;
-        
-        private string externalCarIdField;
-        
-        /// <remarks/>
-        public string externalUserId {
-            get {
-                return this.externalUserIdField;
-            }
-            set {
-                this.externalUserIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string externalCarId {
-            get {
-                return this.externalCarIdField;
-            }
-            set {
-                this.externalCarIdField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3337,7 +5518,547 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class UpdateGroupIdRequest {
+        
+        private Group groupField;
+        
+        private string newExternalGroupIdField;
+        
+        /// <remarks/>
+        public Group group {
+            get {
+                return this.groupField;
+            }
+            set {
+                this.groupField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string newExternalGroupId {
+            get {
+                return this.newExternalGroupIdField;
+            }
+            set {
+                this.newExternalGroupIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class AssignGroupToTaskRequest {
+        
+        private string externalGroupIdField;
+        
+        private string externalTaskIdField;
+        
+        private string uuidTaskField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalGroupId {
+            get {
+                return this.externalGroupIdField;
+            }
+            set {
+                this.externalGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalTaskId {
+            get {
+                return this.externalTaskIdField;
+            }
+            set {
+                this.externalTaskIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidTask {
+            get {
+                return this.uuidTaskField;
+            }
+            set {
+                this.uuidTaskField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class SetGroupExternalIdRequest {
+        
+        private string nameField;
+        
+        private string parentExternalIdField;
+        
+        private string newExternalGroupIdField;
+        
+        /// <remarks/>
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string parentExternalId {
+            get {
+                return this.parentExternalIdField;
+            }
+            set {
+                this.parentExternalIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string newExternalGroupId {
+            get {
+                return this.newExternalGroupIdField;
+            }
+            set {
+                this.newExternalGroupIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class GetGroupsRequest {
+        
+        private string nameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class SetTaskExternalIdRequest {
+        
+        private string nameField;
+        
+        private string parentExternalIdField;
+        
+        private string newExternalTaskIdField;
+        
+        /// <remarks/>
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string parentExternalId {
+            get {
+                return this.parentExternalIdField;
+            }
+            set {
+                this.parentExternalIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string newExternalTaskId {
+            get {
+                return this.newExternalTaskIdField;
+            }
+            set {
+                this.newExternalTaskIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class AssignUserToGroupRequest {
+        
+        private string externalUserIdField;
+        
+        private string externalGroupIdField;
+        
+        private string uuidUserField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalUserId {
+            get {
+                return this.externalUserIdField;
+            }
+            set {
+                this.externalUserIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalGroupId {
+            get {
+                return this.externalGroupIdField;
+            }
+            set {
+                this.externalGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidUser {
+            get {
+                return this.uuidUserField;
+            }
+            set {
+                this.uuidUserField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class RemoveCarFromUserRequest {
+        
+        private string externalUserIdField;
+        
+        private string externalCarIdField;
+        
+        private string uuidUserField;
+        
+        private string uuidCarField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalUserId {
+            get {
+                return this.externalUserIdField;
+            }
+            set {
+                this.externalUserIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalCarId {
+            get {
+                return this.externalCarIdField;
+            }
+            set {
+                this.externalCarIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidUser {
+            get {
+                return this.uuidUserField;
+            }
+            set {
+                this.uuidUserField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidCar {
+            get {
+                return this.uuidCarField;
+            }
+            set {
+                this.uuidCarField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class AssignTaskToUserRequest {
+        
+        private string externalUserIdField;
+        
+        private string externalTaskIdField;
+        
+        private string uuidUserField;
+        
+        private string uuidTaskField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalUserId {
+            get {
+                return this.externalUserIdField;
+            }
+            set {
+                this.externalUserIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalTaskId {
+            get {
+                return this.externalTaskIdField;
+            }
+            set {
+                this.externalTaskIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidUser {
+            get {
+                return this.uuidUserField;
+            }
+            set {
+                this.uuidUserField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidTask {
+            get {
+                return this.uuidTaskField;
+            }
+            set {
+                this.uuidTaskField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class UpdateWorkItemIdRequest {
+        
+        private WorkItem workItemField;
+        
+        private string newExternalWorkItemIdField;
+        
+        /// <remarks/>
+        public WorkItem workItem {
+            get {
+                return this.workItemField;
+            }
+            set {
+                this.workItemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string newExternalWorkItemId {
+            get {
+                return this.newExternalWorkItemIdField;
+            }
+            set {
+                this.newExternalWorkItemIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class UpdateUserIdRequest {
+        
+        private User userField;
+        
+        private string newExternalUserIdField;
+        
+        /// <remarks/>
+        public User user {
+            get {
+                return this.userField;
+            }
+            set {
+                this.userField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string newExternalUserId {
+            get {
+                return this.newExternalUserIdField;
+            }
+            set {
+                this.newExternalUserIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class RemoveTaskFromUserRequest {
+        
+        private string externalUserIdField;
+        
+        private string externalTaskIdField;
+        
+        private string uuidUserField;
+        
+        private string uuidTaskField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalUserId {
+            get {
+                return this.externalUserIdField;
+            }
+            set {
+                this.externalUserIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalTaskId {
+            get {
+                return this.externalTaskIdField;
+            }
+            set {
+                this.externalTaskIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidUser {
+            get {
+                return this.uuidUserField;
+            }
+            set {
+                this.uuidUserField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidTask {
+            get {
+                return this.uuidTaskField;
+            }
+            set {
+                this.uuidTaskField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
+    public partial class RemoveLeaderFromGroupRequest {
+        
+        private string externalUserIdField;
+        
+        private string externalGroupIdField;
+        
+        private string uuidUserField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalUserId {
+            get {
+                return this.externalUserIdField;
+            }
+            set {
+                this.externalUserIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string externalGroupId {
+            get {
+                return this.externalGroupIdField;
+            }
+            set {
+                this.externalGroupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidUser {
+            get {
+                return this.uuidUserField;
+            }
+            set {
+                this.uuidUserField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3370,7 +6091,7 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3381,7 +6102,12 @@ namespace TimrSyncTest.TimrSyncWebService {
         
         private string externalCarIdField;
         
+        private string uuidUserField;
+        
+        private string uuidCarField;
+        
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string externalUserId {
             get {
                 return this.externalUserIdField;
@@ -3392,6 +6118,7 @@ namespace TimrSyncTest.TimrSyncWebService {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string externalCarId {
             get {
                 return this.externalCarIdField;
@@ -3400,111 +6127,36 @@ namespace TimrSyncTest.TimrSyncWebService {
                 this.externalCarIdField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://timr.com/timrsync")]
-    public partial class SetTaskExternalIdRequest {
-        
-        private string nameField;
-        
-        private string parentExternalIdField;
-        
-        private string newExternalTaskIdField;
         
         /// <remarks/>
-        public string name {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidUser {
             get {
-                return this.nameField;
+                return this.uuidUserField;
             }
             set {
-                this.nameField = value;
+                this.uuidUserField = value;
             }
         }
         
         /// <remarks/>
-        public string parentExternalId {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string uuidCar {
             get {
-                return this.parentExternalIdField;
+                return this.uuidCarField;
             }
             set {
-                this.parentExternalIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string newExternalTaskId {
-            get {
-                return this.newExternalTaskIdField;
-            }
-            set {
-                this.newExternalTaskIdField = value;
+                this.uuidCarField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void GetRunningProjectTimesCompletedEventHandler(object sender, GetRunningProjectTimesCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetRunningProjectTimesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetRunningProjectTimesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public RunningProjectTime[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((RunningProjectTime[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void AssignTaskToUserCompletedEventHandler(object sender, AssignTaskToUserCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AssignTaskToUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal AssignTaskToUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void DeleteCarCompletedEventHandler(object sender, DeleteCarCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DeleteCarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3526,37 +6178,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void UpdateWorkItemIdCompletedEventHandler(object sender, UpdateWorkItemIdCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class UpdateWorkItemIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal UpdateWorkItemIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void UpdateCarCompletedEventHandler(object sender, UpdateCarCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateCarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3578,37 +6204,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void UpdateUserIdCompletedEventHandler(object sender, UpdateUserIdCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class UpdateUserIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal UpdateUserIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void GetTasksCompletedEventHandler(object sender, GetTasksCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetTasksCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3630,93 +6230,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void SaveProjectTimeCompletedEventHandler(object sender, SaveProjectTimeCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class SaveProjectTimeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal SaveProjectTimeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public long Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((long)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void AddWorkItemCompletedEventHandler(object sender, AddWorkItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AddWorkItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal AddWorkItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public long Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((long)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void AddUserCompletedEventHandler(object sender, AddUserCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AddUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal AddUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public long Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((long)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void SetDriveLogsStatusCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void SaveWorkTimeCompletedEventHandler(object sender, SaveWorkTimeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SaveWorkTimeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3738,11 +6256,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void AddCarCompletedEventHandler(object sender, AddCarCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AddCarCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3764,18 +6282,44 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void UpdateTaskCompletedEventHandler(object sender, UpdateTaskCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetRunningDriveLogsCompletedEventHandler(object sender, GetRunningDriveLogsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class UpdateTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class GetRunningDriveLogsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal UpdateTaskCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal GetRunningDriveLogsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RunningDriveLog[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RunningDriveLog[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void RemoveUserFromGroupCompletedEventHandler(object sender, RemoveUserFromGroupCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RemoveUserFromGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RemoveUserFromGroupCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -3790,67 +6334,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void DeleteTaskCompletedEventHandler(object sender, DeleteTaskCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class DeleteTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal DeleteTaskCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void RemoveTaskFromUserCompletedEventHandler(object sender, RemoveTaskFromUserCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RemoveTaskFromUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal RemoveTaskFromUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void GetRunningDriveLogCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void DeleteUserCompletedEventHandler(object sender, DeleteUserCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DeleteUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3872,11 +6360,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void GetWorkTimesCompletedEventHandler(object sender, GetWorkTimesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetWorkTimesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3898,18 +6386,18 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void RemoveCarFromUserCompletedEventHandler(object sender, RemoveCarFromUserCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void AssignLeaderToGroupCompletedEventHandler(object sender, AssignLeaderToGroupCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RemoveCarFromUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class AssignLeaderToGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal RemoveCarFromUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal AssignLeaderToGroupCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -3924,11 +6412,63 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void AddUserCompletedEventHandler(object sender, AddUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AddUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AddUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public long Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((long)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void RemoveGroupFromTaskCompletedEventHandler(object sender, RemoveGroupFromTaskCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RemoveGroupFromTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RemoveGroupFromTaskCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void GetRunningWorkTimesCompletedEventHandler(object sender, GetRunningWorkTimesCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetRunningWorkTimesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3950,37 +6490,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void GetProjectTimesCompletedEventHandler(object sender, GetProjectTimesCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetProjectTimesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetProjectTimesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public ProjectTime[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((ProjectTime[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void DeleteWorkItemCompletedEventHandler(object sender, DeleteWorkItemCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DeleteWorkItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -4002,11 +6516,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void UpdateCarIdCompletedEventHandler(object sender, UpdateCarIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateCarIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -4028,11 +6542,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void AddTaskCompletedEventHandler(object sender, AddTaskCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AddTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -4054,11 +6568,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void SaveDriveLogCompletedEventHandler(object sender, SaveDriveLogCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SaveDriveLogCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -4080,18 +6594,18 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void UpdateTaskIdCompletedEventHandler(object sender, UpdateTaskIdCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void UpdateGroupIdCompletedEventHandler(object sender, UpdateGroupIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class UpdateTaskIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class UpdateGroupIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal UpdateTaskIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal UpdateGroupIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -4106,63 +6620,11 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void UpdateWorkItemCompletedEventHandler(object sender, UpdateWorkItemCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class UpdateWorkItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal UpdateWorkItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void GetUsersCompletedEventHandler(object sender, GetUsersCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetUsersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal GetUsersCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public User[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((User[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void GetWorkItemsCompletedEventHandler(object sender, GetWorkItemsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetWorkItemsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -4184,18 +6646,44 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void AssignCarToUserCompletedEventHandler(object sender, AssignCarToUserCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetGroupUsersCompletedEventHandler(object sender, GetGroupUsersCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class AssignCarToUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class GetGroupUsersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal AssignCarToUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal GetGroupUsersCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public User[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((User[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void AssignGroupToTaskCompletedEventHandler(object sender, AssignGroupToTaskCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AssignGroupToTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AssignGroupToTaskCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -4210,37 +6698,89 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void GetCarsCompletedEventHandler(object sender, GetCarsCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void SetGroupExternalIdCompletedEventHandler(object sender, SetGroupExternalIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class GetCarsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class SetGroupExternalIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal GetCarsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal SetGroupExternalIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
         /// <remarks/>
-        public Car[] Result {
+        public bool Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((Car[])(this.results[0]));
+                return ((bool)(this.results[0]));
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void SetDriveLogsStatusCompletedEventHandler(object sender, SetDriveLogsStatusCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SetDriveLogsStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SetDriveLogsStatusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void UnlockProjectTimesCompletedEventHandler(object sender, UnlockProjectTimesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UnlockProjectTimesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UnlockProjectTimesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void UpdateUserCompletedEventHandler(object sender, UpdateUserCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -4262,11 +6802,37 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetUsersCompletedEventHandler(object sender, GetUsersCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetUsersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetUsersCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public User[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((User[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void GetTaskCompletedEventHandler(object sender, GetTaskCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -4288,11 +6854,141 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetProjectTimesCompletedEventHandler(object sender, GetProjectTimesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetProjectTimesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetProjectTimesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public ProjectTime[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((ProjectTime[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void DeleteTaskByUUIDCompletedEventHandler(object sender, DeleteTaskByUUIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteTaskByUUIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteTaskByUUIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void AddGroupCompletedEventHandler(object sender, AddGroupCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AddGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AddGroupCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public long Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((long)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void UpdateGroupCompletedEventHandler(object sender, UpdateGroupCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateGroupCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void DeleteUserByUUIDCompletedEventHandler(object sender, DeleteUserByUUIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteUserByUUIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteUserByUUIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void GetDriveLogsCompletedEventHandler(object sender, GetDriveLogsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDriveLogsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -4314,19 +7010,89 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void SetProjectTimesStatusCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetCarsCompletedEventHandler(object sender, GetCarsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void LockProjectTimesCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetCarsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetCarsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Car[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Car[])(this.results[0]));
+            }
+        }
+    }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void SetProjectTimesStatusCompletedEventHandler(object sender, SetProjectTimesStatusCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SetProjectTimesStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SetProjectTimesStatusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetGroupsCompletedEventHandler(object sender, GetGroupsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetGroupsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetGroupsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Group[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Group[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     public delegate void SetTaskExternalIdCompletedEventHandler(object sender, SetTaskExternalIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SetTaskExternalIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -4348,12 +7114,606 @@ namespace TimrSyncTest.TimrSyncWebService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void SetWorkTimesStatusCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void DeleteWorkItemByUUIDCompletedEventHandler(object sender, DeleteWorkItemByUUIDCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
-    public delegate void UnlockProjectTimesCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteWorkItemByUUIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteWorkItemByUUIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void SetWorkTimesStatusCompletedEventHandler(object sender, SetWorkTimesStatusCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SetWorkTimesStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SetWorkTimesStatusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetTaskByUUIDCompletedEventHandler(object sender, GetTaskByUUIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetTaskByUUIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetTaskByUUIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Task Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Task)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void AssignUserToGroupCompletedEventHandler(object sender, AssignUserToGroupCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AssignUserToGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AssignUserToGroupCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void AddWorkItemCompletedEventHandler(object sender, AddWorkItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AddWorkItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AddWorkItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public long Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((long)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void RemoveCarFromUserCompletedEventHandler(object sender, RemoveCarFromUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RemoveCarFromUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RemoveCarFromUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void AssignTaskToUserCompletedEventHandler(object sender, AssignTaskToUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AssignTaskToUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AssignTaskToUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetRunningProjectTimesCompletedEventHandler(object sender, GetRunningProjectTimesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetRunningProjectTimesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetRunningProjectTimesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RunningProjectTime[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RunningProjectTime[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetGroupLeadersCompletedEventHandler(object sender, GetGroupLeadersCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetGroupLeadersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetGroupLeadersCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public User[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((User[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void UpdateWorkItemIdCompletedEventHandler(object sender, UpdateWorkItemIdCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateWorkItemIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateWorkItemIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void UpdateUserIdCompletedEventHandler(object sender, UpdateUserIdCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateUserIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateUserIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void SaveProjectTimeCompletedEventHandler(object sender, SaveProjectTimeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SaveProjectTimeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SaveProjectTimeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public long Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((long)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void UpdateTaskCompletedEventHandler(object sender, UpdateTaskCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateTaskCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void DeleteTaskCompletedEventHandler(object sender, DeleteTaskCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteTaskCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteTaskCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void RemoveTaskFromUserCompletedEventHandler(object sender, RemoveTaskFromUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RemoveTaskFromUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RemoveTaskFromUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void RemoveLeaderFromGroupCompletedEventHandler(object sender, RemoveLeaderFromGroupCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RemoveLeaderFromGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RemoveLeaderFromGroupCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void UpdateTaskIdCompletedEventHandler(object sender, UpdateTaskIdCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateTaskIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateTaskIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void UpdateWorkItemCompletedEventHandler(object sender, UpdateWorkItemCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateWorkItemCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateWorkItemCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void AssignCarToUserCompletedEventHandler(object sender, AssignCarToUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AssignCarToUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AssignCarToUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void DeleteGroupCompletedEventHandler(object sender, DeleteGroupCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteGroupCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void InviteUserCompletedEventHandler(object sender, InviteUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InviteUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InviteUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public long Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((long)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void LockProjectTimesCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void DeleteCarByUUIDCompletedEventHandler(object sender, DeleteCarByUUIDCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteCarByUUIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteCarByUUIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void GetGroupCompletedEventHandler(object sender, GetGroupCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetGroupCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Group Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Group)(this.results[0]));
+            }
+        }
+    }
 }
 
 #pragma warning restore 1591

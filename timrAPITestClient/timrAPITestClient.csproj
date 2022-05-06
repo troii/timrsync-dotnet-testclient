@@ -110,12 +110,24 @@
     <None Include="Web References\TimrSyncWebService\DriveLog.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\TimrSyncWebService\Group.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\TimrSyncWebService\ProjectTime.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\TimrSyncWebService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TimrSyncWebService\RunningDriveLog.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TimrSyncWebService\RunningProjectTime1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TimrSyncWebService\RunningWorkTime1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\TimrSyncWebService\Task.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -148,10 +160,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://timrsync.timr.com/timrsync/timrsync.wsdl">
+    <WebReferenceUrl Include="https://timrsync.timr.com/timr/timrsync.wsdl">
       <UrlBehavior>Static</UrlBehavior>
       <RelPath>Web References\TimrSyncWebService\</RelPath>
-      <UpdateFromURL>http://timrsync.timr.com/timrsync/timrsync.wsdl</UpdateFromURL>
+      <UpdateFromURL>https://timrsync.timr.com/timr/timrsync.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
